@@ -45,55 +45,59 @@
     <!-- MAIN -->
     <main>
 
-      <form class="application" action="https://echo.htmlacademy.ru/">
+      <form class="programm-form" action="https://echo.htmlacademy.ru/">
 
         <div class="container">
 
-          <h1 class="application__title">Подбор программы</h1>
+          <h1 class="programm-form__title">Подбор программы</h1>
 
-          <p class="application__description">
+          <p class="programm-form__description">
             Заполните анкету, и мы подберем программу питания для вашего кота
           </p>
 
-          <label class="application__label" for="name">Имя:</label>
-          <input class="application__input" id="name" type="text" placeholder="Барсик">
+          <fieldset class="programm-form__group">
 
-          <label class="application__label" for="weight">Вес (кг):</label>
-          <input class="application__input" id="weight" type="text" placeholder="7">
+            <label class="programm-form__label" for="name">Имя:</label>
+            <input class="programm-form__input" id="name" type="text" placeholder="Барсик">
 
-          <label class="application__label" for="age">Возраст (лет):</label>
-          <input class="application__input" id="age" type="text" placeholder="7">
+            <label class="programm-form__label" for="weight">Вес (кг):</label>
+            <input class="programm-form__input" id="weight" type="text" placeholder="7">
 
-          <fildset class="application__group">
+            <label class="programm-form__label" for="age">Возраст (лет):</label>
+            <input class="programm-form__input" id="age" type="text" placeholder="7">
 
-            <input class="application-input" id="loss" type="radio" value="loss" name="programm-type">
-            <label class="application-label"  for="loss">Похудение</label>
+          </fieldset>
 
-            <input class="application-input" id="gain" type="radio" value="gain" name="programm-type">
-            <label class="application-label"  for="gain">Набор массы</label>
+          <fildset class="programm-form__group">
 
-            <input class="application-input" id="dont-know" type="radio" value="dont-know" name="programm-type">
-            <label class="application-label"  for="dont-know">Не знаю (нужен ваш совет)</label>
+            <input class="programm-form-input" id="loss" type="radio" value="loss" name="programm-type">
+            <label class="programm-form-label"  for="loss">Похудение</label>
+
+            <input class="programm-form-input" id="gain" type="radio" value="gain" name="programm-type">
+            <label class="programm-form-label"  for="gain">Набор массы</label>
+
+            <input class="programm-form-input" id="dont-know" type="radio" value="dont-know" name="programm-type">
+            <label class="programm-form-label"  for="dont-know">Не знаю (нужен ваш совет)</label>
 
           </fildset>
 
-          <fildset class="application__group">
+          <fildset class="programm-form__group">
 
-            <legend class="application__group-name">
+            <legend class="programm-form__group-name">
               Контактные данные (владельца кота)
             </legend>
 
-            <label class="application-label" for="email">E-mail:</label>
-            <input class="application-input" id="email" type="email" placeholder="kuklachev@gmail.com">
+            <label class="programm-form-label" for="email">E-mail:</label>
+            <input class="programm-form-input" id="email" type="email" placeholder="kuklachev@gmail.com">
 
-            <label class="application-label" for="phone">Телефон:</label>
-            <input class="application-input" id="phone" type="tel" placeholder="8 (960) 900-60-90">
+            <label class="programm-form-label" for="phone">Телефон:</label>
+            <input class="programm-form-input" id="phone" type="tel" placeholder="8 (960) 900-60-90">
 
           </fildset>
 
-          <fieldset class="application__group">
+          <fieldset class="programm-form__group">
 
-            <legend class="application__group-name">
+            <legend class="programm-form__group-name">
               Комментарий
             </legend>
 
@@ -102,29 +106,32 @@
 
           </fieldset>
 
-          <fieldset class="application__group">
+          <fieldset class="programm-form__group">
 
-            <legend class="application__group-name">
+            <legend class="programm-form__group-name">
               Дополнительно
             </legend>
 
-            <input class="application-input" type="checkbox" id="sugar" name="additionally" value="sugar" checked>
-            <label class="application-label" for="sugar">Сахарозаменитель</label>
+            <input class="programm-form-input" type="checkbox" id="sugar" name="additionally" value="sugar" checked>
+            <label class="programm-form-label" for="sugar">Сахарозаменитель</label>
 
-            <input class="application-input" type="checkbox" id="water" name="additionally" value="water" checked>
-            <label class="application-label" for="water">Питьевая вода</label>
+            <input class="programm-form-input" type="checkbox" id="water" name="additionally" value="water" checked>
+            <label class="programm-form-label" for="water">Питьевая вода</label>
 
-            <input class="application-input" type="checkbox" id="milk" name="additionally" value="milk" checked>
-            <label class="application-label" for="milk">Молоко</label>
+            <input class="programm-form-input" type="checkbox" id="milk" name="additionally" value="milk" checked>
+            <label class="programm-form-label" for="milk">Молоко</label>
 
-            <input class="application-input" type="checkbox" id="vitamins" name="additionally" value="vitamins" checked>
-            <label class="application-label" for="vitamins">Витамины</label>
+            <input class="programm-form-input" type="checkbox" id="vitamins" name="additionally" value="vitamins" checked>
+            <label class="programm-form-label" for="vitamins">Витамины</label>
 
           </fieldset>
 
-          <button class="application__btn button" type="submit">Отправить заявку</button>
+          <div>
 
-          <small class="application__note">* - Обязательные поля</small>
+            <button class="programm-form__btn button" type="submit">Отправить заявку</button>
+            <span class="programm-form__note">* - Обязательные поля</span>
+
+          </div>
 
         </div>
 
