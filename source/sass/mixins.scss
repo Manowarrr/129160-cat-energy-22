@@ -1,0 +1,22 @@
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin font($size, $line-height) {
+  font-size: $size;
+  line-height: $line-height;
+  font-weight: 400;
+}
+
+@mixin arial-font {
+  font-family: 'Arial', sans-serif;
+}
+
+@mixin link {
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+

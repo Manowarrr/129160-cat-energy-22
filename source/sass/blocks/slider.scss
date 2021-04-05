@@ -1,0 +1,6 @@
+.slider {
+  &__toggle {
+    @include font(16px, 20px);
+    text-transform: uppercase;
+  }
+}

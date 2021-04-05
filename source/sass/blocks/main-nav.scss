@@ -1,0 +1,14 @@
+.main-nav {
+  &__list {
+    @include list-reset();
+  }
+
+  &__link {
+    @include font(20px, 20px);
+    font-weight: 500;
+    color: $black;
+    text-transform: uppercase;
+  }
+}
+
+
