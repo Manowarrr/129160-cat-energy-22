@@ -7,6 +7,7 @@
 
   &__address {
     font-family: "Arial", "Helvetica", sans-serif;
+
     @include font(14px, 20px);
     color: $features-text-color;
   }

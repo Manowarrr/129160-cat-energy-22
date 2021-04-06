@@ -11,12 +11,10 @@
 }
 
 @mixin arial-font {
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
 }
 
 @mixin link {
   text-transform: uppercase;
   text-decoration: none;
 }
-
-
