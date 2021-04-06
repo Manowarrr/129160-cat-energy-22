@@ -1,0 +1,10 @@
+.page-footer {
+  background-color: $programmes-background;
+
+  &__copyright {
+    font-family: "Arial", "Helvetica", sans-serif;
+
+    @include font(16px, 18px);
+    color: $features-text-color;
+  }
+}

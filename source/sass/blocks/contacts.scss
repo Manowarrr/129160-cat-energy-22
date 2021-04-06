@@ -1,0 +1,14 @@
+.contacts {
+  &__offer {
+    @include font(16px, 18px);
+    color: $map-offer-text-color;
+    text-transform: uppercase;
+  }
+
+  &__address {
+    font-family: "Arial", "Helvetica", sans-serif;
+
+    @include font(14px, 20px);
+    color: $features-text-color;
+  }
+}
