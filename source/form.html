@@ -2,7 +2,9 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
 
@@ -26,13 +28,13 @@
 
           <ul class="main-nav__list">
             <li class="main-nav__item">
-              <a href="index.html">Главная</a>
+              <a class="main-nav__link" href="index.html">Главная</a>
             </li>
             <li class="main-nav__item">
-              <a href="catalog.html">Каталог продукции</a>
+              <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
             </li>
             <li class="main-nav__item">
-              <a>Подбор программы</a>
+              <a class="main-nav__link">Подбор программы</a>
             </li>
           </ul>
 
@@ -77,18 +79,18 @@
           <fildset class="programm-form__group">
 
             <div>
-              <input class="programm-form-input" id="loss" type="radio" value="loss" name="programm-type">
-              <label class="programm-form-label"  for="loss">Похудение</label>
+              <input class="programm-form__input" id="loss" type="radio" value="loss" name="programm-type">
+              <label class="programm-form__label"  for="loss">Похудение</label>
             </div>
 
             <div>
-              <input class="programm-form-input" id="gain" type="radio" value="gain" name="programm-type">
-              <label class="programm-form-label"  for="gain">Набор массы</label>
+              <input class="programm-form__input" id="gain" type="radio" value="gain" name="programm-type">
+              <label class="programm-form__label"  for="gain">Набор массы</label>
             </div>
 
             <div>
-              <input class="programm-form-input" id="dont-know" type="radio" value="dont-know" name="programm-type">
-              <label class="programm-form-label"  for="dont-know">Не знаю (нужен ваш совет)</label>
+              <input class="programm-form__input" id="dont-know" type="radio" value="dont-know" name="programm-type">
+              <label class="programm-form__label"  for="dont-know">Не знаю (нужен ваш совет)</label>
             </div>
 
           </fildset>
@@ -100,13 +102,13 @@
             </legend>
 
             <div>
-              <label class="programm-form-label" for="email">E-mail:</label>
-              <input class="programm-form-input" id="email" type="email" placeholder="kuklachev@gmail.com">
+              <label class="programm-form__label" for="email">E-mail:</label>
+              <input class="programm-form__input" id="email" type="email" placeholder="kuklachev@gmail.com">
             </div>
 
             <div>
-              <label class="programm-form-label" for="phone">Телефон:</label>
-              <input class="programm-form-input" id="phone" type="tel" placeholder="8 (960) 900-60-90">
+              <label class="programm-form__label" for="phone">Телефон:</label>
+              <input class="programm-form__input" id="phone" type="tel" placeholder="8 (960) 900-60-90">
             </div>
 
           </fildset>
@@ -127,23 +129,23 @@
             </legend>
 
             <div>
-              <input class="programm-form-input" type="checkbox" id="sugar" name="additionally" value="sugar" checked>
-              <label class="programm-form-label" for="sugar">Сахарозаменитель</label>
+              <input class="programm-form__input" type="checkbox" id="sugar" name="additionally" value="sugar" checked>
+              <label class="programm-form__label" for="sugar">Сахарозаменитель</label>
             </div>
 
             <div>
-              <input class="programm-form-input" type="checkbox" id="water" name="additionally" value="water" checked>
-              <label class="programm-form-label" for="water">Питьевая вода</label>
+              <input class="programm-form__input" type="checkbox" id="water" name="additionally" value="water" checked>
+              <label class="programm-form__label" for="water">Питьевая вода</label>
             </div>
 
             <div>
-              <input class="programm-form-input" type="checkbox" id="milk" name="additionally" value="milk" checked>
-              <label class="programm-form-label" for="milk">Молоко</label>
+              <input class="programm-form__input" type="checkbox" id="milk" name="additionally" value="milk" checked>
+              <label class="programm-form__label" for="milk">Молоко</label>
             </div>
 
             <div>
-              <input class="programm-form-input" type="checkbox" id="vitamins" name="additionally" value="vitamins" checked>
-              <label class="programm-form-label" for="vitamins">Витамины</label>
+              <input class="programm-form__input" type="checkbox" id="vitamins" name="additionally" value="vitamins" checked>
+              <label class="programm-form__label" for="vitamins">Витамины</label>
             </div>
 
           </fieldset>

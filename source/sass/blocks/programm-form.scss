@@ -1,0 +1,21 @@
+.programm-form {
+  &__title {
+    @include font(36px, 36px);
+  }
+
+  &__label,
+  &__input::placeholder {
+    @include font(16px, 18px);
+    color: $features-text-color;
+    text-transform: uppercase;
+  }
+
+  &__description {
+    @include font(14px, 18px);
+    text-transform: uppercase;
+  }
+
+  &__group-name {
+    @include font(24px, 26px);
+  }
+}
