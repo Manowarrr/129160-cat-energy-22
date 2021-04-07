@@ -1,0 +1,16 @@
+.product-card {
+  &__features {
+    @include list-reset();
+  }
+
+  &__title {
+    @include font(16px, 20px);
+    text-transform: uppercase;
+    color: $product-card-text-color;
+  }
+
+  &__feature {
+    @include font(12px, 16px);
+    color: $features-text-color;
+  }
+}

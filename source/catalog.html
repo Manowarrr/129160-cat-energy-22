@@ -2,7 +2,9 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
 
@@ -26,13 +28,13 @@
 
           <ul class="main-nav__list">
             <li class="main-nav__item">
-              <a>Главная</a>
+              <a class="main-nav__link">Главная</a>
             </li>
             <li class="main-nav__item">
-              <a href="catalog.html">Каталог продукции</a>
+              <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
             </li>
             <li class="main-nav__item">
-              <a href="form.html">Подбор программы</a>
+              <a class="main-nav__link" href="form.html">Подбор программы</a>
             </li>
           </ul>
 
@@ -58,7 +60,7 @@
 
             <!-- product card -->
             <article class="main-catalog__item product-card">
-              <img class="product-card__image" src="./source/img/chicken-small-mobile.png" width="68" height="86" alt="Cat energy pro 500 г">
+              <img class="product-card__image" src="img/chicken-small-mobile.png" width="68" height="86" alt="Cat energy pro 500 г">
               <h2 class="product-card__title">
                 Cat energy pro 500 г
               </h2>
@@ -81,7 +83,7 @@
 
             <!-- product card -->
             <article class="main-catalog product-card">
-              <img class="product-card__image" src="./source/img/chicken-big-mobile.png" width="84" height="101" alt="Cat energy pro 1000 г">
+              <img class="product-card__image" src="img/chicken-big-mobile.png" width="84" height="101" alt="Cat energy pro 1000 г">
               <h2 class="product-card__title">
                 Cat energy pro 1000 г
               </h2>
@@ -104,7 +106,7 @@
 
             <!-- product card -->
             <article class="main-catalog__item product-card">
-              <img class="product-card__image" src="./source/img/fish-small-mobile.png" width="68" height="86" alt="Cat energy pro 500 г">
+              <img class="product-card__image" src="img/fish-small-mobile.png" width="68" height="86" alt="Cat energy pro 500 г">
               <h2 class="product-card__title">
                 Cat energy pro 500 г
               </h2>
@@ -127,7 +129,7 @@
 
             <!-- product card -->
             <article class="main-catalog__item product-card">
-              <img class="product-card__image" src="./source/img/fish-big-mobile.png" width="84" height="101" alt="Cat energy pro 1000 г">
+              <img class="product-card__image" src="img/fish-big-mobile.png" width="84" height="101" alt="Cat energy pro 1000 г">
               <h2 class="product-card__title">
                 Cat energy pro 1000 г
               </h2>
@@ -150,7 +152,7 @@
 
             <!-- product card -->
             <article class="main-catalog__item product-card">
-              <img class="product-card__image" src="./source/img/buckwheat-small-mobile.png" width="68" height="86" alt="Cat energy slim 500 г">
+              <img class="product-card__image" src="img/buckwheat-small-mobile.png" width="68" height="86" alt="Cat energy slim 500 г">
               <h2 class="product-card__title">
                 Cat energy pro 500 г
               </h2>
@@ -173,7 +175,7 @@
 
             <!-- product card -->
             <article class="main-catalog__item product-card">
-              <img class="product-card__image" src="./source/img/buckwheat-big-mobile.png" width="84" height="101" alt="Cat energy slim 1000 г">
+              <img class="product-card__image" src="img/buckwheat-big-mobile.png" width="84" height="101" alt="Cat energy slim 1000 г">
               <h2 class="product-card__title">
                 Cat energy pro 1000 г
               </h2>
@@ -196,7 +198,7 @@
 
             <!-- product card -->
             <article class="main-catalog__item product-card">
-              <img class="product-card__image" src="./source/img/rice-samll-mobile.png" width="68" height="86" alt="Cat energy slim 500 г">
+              <img class="product-card__image" src="img/rice-small-mobile.png" width="68" height="86" alt="Cat energy slim 500 г">
               <h2 class="product-card__title">
                 Cat energy slim 500 г
               </h2>
@@ -217,11 +219,11 @@
               <a class="product-card__button button" href="#">Заказать</a>
             </article>
 
-            <li class="main-catalog__item main-catalog__item--showall showall-card">
+            <article class="main-catalog__item main-catalog__item--showall showall-card">
               <p class="showall-card__text--bold">Показать еще 100500 товаров</p>
               <p class="showall-card__text">На самом деле вкусов гораздо больше!</p>
               <button class="showall-card__button button button--grey">Показать все</button>
-            </li>
+            </article>
 
           </div>
 
