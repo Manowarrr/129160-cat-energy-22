@@ -59,17 +59,17 @@
 
           <fieldset class="programm-form__group">
 
-            <div>
+            <div class="programm-form__group-wrapper">
               <label class="programm-form__label" for="name">Имя:</label>
               <input class="programm-form__input" id="name" type="text" placeholder="Барсик">
             </div>
 
-            <div>
+            <div class="programm-form__group-wrapper">
               <label class="programm-form__label" for="weight">Вес (кг):</label>
               <input class="programm-form__input" id="weight" type="text" placeholder="7">
             </div>
 
-            <div>
+            <div class="programm-form__group-wrapper">
               <label class="programm-form__label" for="age">Возраст (лет):</label>
               <input class="programm-form__input" id="age" type="text" placeholder="7">
             </div>
@@ -78,17 +78,17 @@
 
           <fildset class="programm-form__group">
 
-            <div>
+            <div class="programm-form__group-wrapper">
               <input class="programm-form__input" id="loss" type="radio" value="loss" name="programm-type">
               <label class="programm-form__label"  for="loss">Похудение</label>
             </div>
 
-            <div>
+            <div class="programm-form__group-wrapper">
               <input class="programm-form__input" id="gain" type="radio" value="gain" name="programm-type">
               <label class="programm-form__label"  for="gain">Набор массы</label>
             </div>
 
-            <div>
+            <div class="programm-form__group-wrapper">
               <input class="programm-form__input" id="dont-know" type="radio" value="dont-know" name="programm-type">
               <label class="programm-form__label"  for="dont-know">Не знаю (нужен ваш совет)</label>
             </div>
@@ -101,12 +101,12 @@
               Контактные данные (владельца кота)
             </legend>
 
-            <div>
+            <div class="programm-form__group-wrapper">
               <label class="programm-form__label" for="email">E-mail:</label>
               <input class="programm-form__input" id="email" type="email" placeholder="kuklachev@gmail.com">
             </div>
 
-            <div>
+            <div class="programm-form__group-wrapper">
               <label class="programm-form__label" for="phone">Телефон:</label>
               <input class="programm-form__input" id="phone" type="tel" placeholder="8 (960) 900-60-90">
             </div>
@@ -115,7 +115,7 @@
 
           <div class="programm-form__group">
 
-            <div>
+            <div class="programm-form__group-wrapper">
               <label class="programm-form__label" for="comment">Комментарий</label>
               <textarea class="programm-form__textarea" id="comment" placeholder="расскажите обо всех повадках кота"></textarea>
             </div>
@@ -128,22 +128,22 @@
               Дополнительно
             </legend>
 
-            <div>
+            <div class="programm-form__group-wrapper">
               <input class="programm-form__input" type="checkbox" id="sugar" name="additionally" value="sugar" checked>
               <label class="programm-form__label" for="sugar">Сахарозаменитель</label>
             </div>
 
-            <div>
+            <div class="programm-form__group-wrapper">
               <input class="programm-form__input" type="checkbox" id="water" name="additionally" value="water" checked>
               <label class="programm-form__label" for="water">Питьевая вода</label>
             </div>
 
-            <div>
+            <div class="programm-form__group-wrapper">
               <input class="programm-form__input" type="checkbox" id="milk" name="additionally" value="milk" checked>
               <label class="programm-form__label" for="milk">Молоко</label>
             </div>
 
-            <div>
+            <div class="programm-form__group-wrapper">
               <input class="programm-form__input" type="checkbox" id="vitamins" name="additionally" value="vitamins" checked>
               <label class="programm-form__label" for="vitamins">Витамины</label>
             </div>
@@ -151,10 +151,8 @@
           </fieldset>
 
           <div>
-
             <button class="programm-form__btn button" type="submit">Отправить заявку</button>
             <span class="programm-form__note">* - Обязательные поля</span>
-
           </div>
 
         </div>
