@@ -10,4 +10,9 @@
 
   border: none;
   background-color: $button-background-color;
+
+  &--grey {
+    background-color: $programmes-background;
+    color: $features-text-color;
+  }
 }

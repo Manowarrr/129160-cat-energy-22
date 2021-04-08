@@ -1,0 +1,5 @@
+.main-catalog {
+  &__title {
+    @include font(36px, 36px);
+  }
+}

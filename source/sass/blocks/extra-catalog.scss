@@ -1,0 +1,29 @@
+.extra-catalog {
+  &__title {
+    @include font(24px, 24px);
+  }
+
+  &__gift {
+    font-family: "Arial", "Helvetica", sans-serif;
+    color: $white;
+    background-color: $mobile-promo-background;
+  }
+}
+
+.extra-products {
+  @include list-reset();
+}
+
+.extra-product {
+  &__name {
+    @include font(16px, 16px);
+    color: $product-card-text-color;
+    text-transform: uppercase;
+  }
+
+  &__quantity,
+  &__price {
+    @include font(14px, 14px);
+    color: $features-text-color;
+  }
+}
