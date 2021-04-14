@@ -1,10 +1,13 @@
 .page-footer {
   background-color: $programmes-background;
+}
 
-  &__copyright {
-    font-family: "Arial", "Helvetica", sans-serif;
+.page-footer__wrapper {
+  display: flex;
+  flex-direction: column;
 
-    @include font(16px, 18px);
-    color: $features-text-color;
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
   }
 }

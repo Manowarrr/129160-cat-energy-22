@@ -1,3 +1,14 @@
 .page-header {
-  color: black;
+  @media (min-width: $desktop-width) {
+    padding: 0 30px 0;
+
+    background-image: linear-gradient(to right, transparent 50%, #65a93a 50%);
+  }
+}
+
+.page-header__wrapper {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
 }

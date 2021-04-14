@@ -1,0 +1,12 @@
+.copyright {
+  font-family: "Arial", "Helvetica", sans-serif;
+
+  @include font(16px, 18px);
+  color: $features-text-color;
+}
+
+
+.copyright__link {
+  @include font(16px, 16px);
+  color: $features-text-color;
+}

@@ -1,16 +1,17 @@
-.features {
-  &__list {
+.features__list {
     @include list-reset();
-  }
 
-  &__title {
-    @include font(36px, 40px);
-  }
+    @media (min-width: $tablet-width) {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+}
 
-  &__description {
-    font-family: "Arial", "Helvetica", sans-serif;
+.features__title {
+  @include font(36px, 40px);
 
-    @include font(14px, 18px);
-    color: $features-text-color;
+  @media (min-width: $tablet-width) {
+    @include font(60px, 60px);
   }
 }
