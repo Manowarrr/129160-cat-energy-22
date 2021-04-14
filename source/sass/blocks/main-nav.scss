@@ -1,12 +1,38 @@
 .main-nav {
-  &__list {
-    @include list-reset();
+  @include font(20px, 20px);
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+
+  @media (min-width: $tablet-width)  {
+    width: 60%;
+
+    @include font(18px, 24px);
+    font-weight: 400;
   }
 
-  &__link {
-    @include font(20px, 20px);
-    font-weight: 500;
-    color: $black;
-    text-transform: uppercase;
+  @media (min-width: $desktop-width) {
+    width: 39%;
+
+    z-index: 2;
+
+    @include font(20px, auto);
+  }
+}
+
+.main-nav__list {
+  @include list-reset();
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.main-nav__link {
+  color: $black;
+
+  @media (min-width: $desktop-width) {
+    color: $white;
   }
 }

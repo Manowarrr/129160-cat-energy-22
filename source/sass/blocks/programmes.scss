@@ -2,25 +2,11 @@
   &__list {
     @include list-reset();
   }
+}
 
-  &__item {
-    background-color: $programmes-background;
-  }
-
-  &__title {
-    @include font(24px, 37px);
-  }
-
-  &__description {
-    font-family: "Arial", "Helvetica", sans-serif;
-
-    @include font(14px, 18px);
-    color: $features-text-color;
-  }
-
-  &__link {
-    @include font(16px, 16px);
-    color: $black;
-    text-transform: uppercase;
+.programmes__list {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
   }
 }
