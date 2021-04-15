@@ -3,10 +3,6 @@
 
   color: $white;
 
-  &__title {
-    @include font(36px, 36px);
-  }
-
   &::before {
     content: "";
 
@@ -20,10 +16,92 @@
     width: 100%;
 
     background-color: $mobile-promo-background;
-    background-image: linear-gradient($mobile-promo-background, $mobile-promo-background),
-      url("../../img/index-background-desktop.png");
+    background-image: url("../../img/index-background-mobile.jpg");
     background-position: 0 center;
     background-repeat: no-repeat;
     background-size: cover;
+  }
+
+  @media (min-width: $tablet-width) {
+    color: $black;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: linear-gradient(to right, transparent 50%, #65a93a 50%);
+
+    &::before {
+      content: "";
+      display: block;
+      background-image: url("../img/index-background-desktop.jpg");
+
+      width: 50%;
+      max-width: 720px;
+      min-height: 696px;
+      height: auto;
+      position: absolute;
+      top: auto;
+      bottom: 0;
+      left: auto;
+      right: 0;
+      z-index: 1;
+    }
+  }
+}
+
+.promo__wrapper {
+  position: relative;
+  z-index: 2;
+}
+
+.promo__title {
+  @include font(36px, 36px);
+
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    @include font(60px, 60px);
+
+    text-align: left;
+  }
+}
+
+.promo__slogan {
+  text-align: center;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    @include font(20px, 20px);
+
+    text-align: left;
+  }
+}
+
+.promo__link {
+  @media (min-width: $tablet-width) {
+    align-self: flex-start;
+  }
+}
+
+.promo__image {
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    bottom: 0;
+    right: 100px;
+  }
+}
+
+.promo__container {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    padding: 0 207px 200px 87px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 607px 200px 87px;
   }
 }

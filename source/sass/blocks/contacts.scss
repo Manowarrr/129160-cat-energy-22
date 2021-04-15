@@ -1,14 +1,24 @@
-.contacts {
-  &__offer {
-    @include font(16px, 18px);
-    color: $map-offer-text-color;
-    text-transform: uppercase;
+.contacts__info {
+  display: flex;
+}
+
+.contacts__offer {
+  @include font(16px, 18px);
+  color: $map-offer-text-color;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    @include font(20px, 21px);
   }
+}
 
-  &__address {
-    font-family: "Arial", "Helvetica", sans-serif;
+.contacts__address {
+  font-family: "Arial", "Helvetica", sans-serif;
 
-    @include font(14px, 20px);
-    color: $features-text-color;
+  @include font(14px, 20px);
+  color: $features-text-color;
+
+  @media (min-width: $tablet-width) {
+    @include font(16px, 20px);
   }
 }

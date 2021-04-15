@@ -1,35 +1,96 @@
 .example {
   background-color: $example-background;
+  padding: 0 20px;
 
-  &__list {
-    @include list-reset();
+  @media (min-width: $tablet-width) {
+    padding: 0 30px;
   }
 
-  &__title {
-    @include font(36px, 40px);
+  @media (min-width: $desktop-width) {
+    padding: 0 110px;
+  }
+}
+
+.example__wrapper {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.example__content {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
 
-  &__description {
-    font-family: "Arial", "Helvetica", sans-serif;
+  @media (min-width: $desktop-width) {
+    display: block;
+    width: 50%;
+  }
+}
 
-    @include font(14px, 18px);
-    color: $features-text-color;
+.example__list {
+  @include list-reset();
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.example__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.example__title {
+  @include font(36px, 40px);
+
+  @media (min-width: $tablet-width) {
+    @include font(60px, 60px);
   }
 
-  &__stat {
-    @include font(24px, 24px);
-    text-transform: uppercase;
+  @media (min-width: $desktop-width) {
+    width: 100%;
   }
+}
 
-  &__text {
-    font-family: "Arial", "Helvetica", sans-serif;
+.example__description {
+  font-family: "Arial", "Helvetica", sans-serif;
 
-    @include font(12px, 12px);
-    color: $features-text-color;
+  @include font(14px, 18px);
+  color: $features-text-color;
+
+  @media (min-width: $tablet-width) {
+    @include font(16px, 24px);
   }
+}
 
-  &__info {
-    @include font(14px, 20px);
-    text-transform: uppercase;
+.example__stat {
+  @include font(24px, 24px);
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    @include font(30px, 37px);
+  }
+}
+
+.example__text {
+  font-family: "Arial", "Helvetica", sans-serif;
+
+  @include font(12px, 12px);
+  color: $features-text-color;
+
+  @media (min-width: $tablet-width) {
+    @include font(14px, 14px);
+  }
+}
+
+.example__info {
+  @include font(14px, 20px);
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    @include font(20px, 20px);
   }
 }
