@@ -11,18 +11,17 @@
     <!-- HEADER -->
     <header class="page-header">
 
-      <div class="container">
+      <div class="page-header__wrapper container">
 
         <!-- logo -->
-        <a class="page-header__logo" href="index.html">
-          <img src="img/logo-mobile.svg" width="33" height="38" alt="Функциональное питание для котов 'Cat Energy'">
-          <img src="img/footer-logo.svg" width="101" height="18" alt="Функциональное питание для котов 'Cat Energy'">
+        <a class="page-header__logo">
+          <img src="img/logo-mobile.svg" width="191" height="39" alt="Функциональное питание для котов 'Cat Energy'">
         </a>
 
         <!-- navigation -->
         <nav class="main-nav">
 
-          <button class="main-nav__toggle" type="button">
+          <button class="main-nav__toggle visually-hidden" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
 
@@ -49,7 +48,7 @@
 
       <form class="programm-form" action="https://echo.htmlacademy.ru/">
 
-        <div class="container">
+        <div class="programm-form__wrapper container">
 
           <h1 class="programm-form__title">Подбор программы</h1>
 
@@ -57,45 +56,46 @@
             Заполните анкету, и мы подберем программу питания для вашего кота
           </p>
 
-          <fieldset class="programm-form__group">
+          <div class="programm-form__info">
+            <fieldset class="programm-form__group">
 
-            <div class="programm-form__group-wrapper">
-              <label class="programm-form__label" for="name">Имя:</label>
-              <input class="programm-form__input" id="name" type="text" placeholder="Барсик">
-            </div>
+              <div class="programm-form__group-wrapper">
+                <label class="programm-form__label" for="name">Имя:</label>
+                <input class="programm-form__input" id="name" type="text" placeholder="Барсик">
+              </div>
 
-            <div class="programm-form__group-wrapper">
-              <label class="programm-form__label" for="weight">Вес (кг):</label>
-              <input class="programm-form__input" id="weight" type="text" placeholder="7">
-            </div>
+              <div class="programm-form__group-wrapper">
+                <label class="programm-form__label" for="weight">Вес (кг):</label>
+                <input class="programm-form__input" id="weight" type="text" placeholder="7">
+              </div>
 
-            <div class="programm-form__group-wrapper">
-              <label class="programm-form__label" for="age">Возраст (лет):</label>
-              <input class="programm-form__input" id="age" type="text" placeholder="7">
-            </div>
+              <div class="programm-form__group-wrapper">
+                <label class="programm-form__label" for="age">Возраст (лет):</label>
+                <input class="programm-form__input" id="age" type="text" placeholder="7">
+              </div>
 
-          </fieldset>
+            </fieldset>
 
-          <fildset class="programm-form__group">
+            <fieldset class="programm-form__group">
 
-            <div class="programm-form__group-wrapper">
-              <input class="programm-form__input" id="loss" type="radio" value="loss" name="programm-type">
-              <label class="programm-form__label"  for="loss">Похудение</label>
-            </div>
+              <div class="programm-form__group-wrapper">
+                <input class="programm-form__input" id="loss" type="radio" value="loss" name="programm-type">
+                <label class="programm-form__label"  for="loss">Похудение</label>
+              </div>
 
-            <div class="programm-form__group-wrapper">
-              <input class="programm-form__input" id="gain" type="radio" value="gain" name="programm-type">
-              <label class="programm-form__label"  for="gain">Набор массы</label>
-            </div>
+              <div class="programm-form__group-wrapper">
+                <input class="programm-form__input" id="gain" type="radio" value="gain" name="programm-type">
+                <label class="programm-form__label"  for="gain">Набор массы</label>
+              </div>
 
-            <div class="programm-form__group-wrapper">
-              <input class="programm-form__input" id="dont-know" type="radio" value="dont-know" name="programm-type">
-              <label class="programm-form__label"  for="dont-know">Не знаю (нужен ваш совет)</label>
-            </div>
+              <div class="programm-form__group-wrapper">
+                <input class="programm-form__input" id="dont-know" type="radio" value="dont-know" name="programm-type">
+                <label class="programm-form__label"  for="dont-know">Не знаю (нужен ваш совет)</label>
+              </div>
 
-          </fildset>
-
-          <fildset class="programm-form__group">
+            </fieldset>
+          </div>
+          <fieldset class="programm-form__group programm-form__group--contacts">
 
             <legend class="programm-form__group-name">
               Контактные данные (владельца кота)
@@ -111,18 +111,22 @@
               <input class="programm-form__input" id="phone" type="tel" placeholder="8 (960) 900-60-90">
             </div>
 
-          </fildset>
+          </fieldset>
 
-          <div class="programm-form__group">
+          <fieldset class="programm-form__group">
+
+            <legend class="programm-form__group-name">
+              Комментарий
+            </legend>
 
             <div class="programm-form__group-wrapper">
-              <label class="programm-form__label" for="comment">Комментарий</label>
+              <label class="programm-form__label visually-hidden" for="comment">Комментарий</label>
               <textarea class="programm-form__textarea" id="comment" placeholder="расскажите обо всех повадках кота"></textarea>
             </div>
 
-          </div>
+          </fieldset>
 
-          <fieldset class="programm-form__group">
+          <fieldset class="programm-form__group programm-form__group--additional">
 
             <legend class="programm-form__group-name">
               Дополнительно
@@ -150,7 +154,7 @@
 
           </fieldset>
 
-          <div>
+          <div class="programm-form__submit">
             <button class="programm-form__btn button" type="submit">Отправить заявку</button>
             <span class="programm-form__note">* - Обязательные поля</span>
           </div>
@@ -188,7 +192,7 @@
     <!-- FOOTER -->
     <footer class="page-footer">
 
-      <div class="container">
+      <div class="page-footer__wrapper container">
 
         <a class="page-footer__logo">
           <img src="img/footer-logo.svg" width="101" height="18" alt="Функциональное питание для котов 'Cat Energy'">
