@@ -4,7 +4,7 @@
   text-transform: uppercase;
   text-align: center;
 
-  @media (min-width: $tablet-width)  {
+  @media (min-width: $tablet-width) {
     width: 60%;
 
     @include font(18px, 24px);

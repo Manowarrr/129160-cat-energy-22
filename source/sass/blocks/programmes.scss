@@ -1,10 +1,6 @@
-.programmes {
-  &__list {
-    @include list-reset();
-  }
-}
-
 .programmes__list {
+  @include list-reset();
+
   @media (min-width: $desktop-width) {
     display: flex;
     justify-content: space-between;
