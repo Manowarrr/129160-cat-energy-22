@@ -1,12 +1,18 @@
-.showall-card {
-  &__text {
-    @include font(12px, 16px);
-    color: $features-text-color;
-  }
+.showall-card__text {
+  @include font(12px, 16px);
+  color: $features-text-color;
 
-  &__text--bold {
-    @include font(16px, 20px);
-    color: $product-card-text-color;
-    text-transform: uppercase;
+  @media (min-width: $tablet-width) {
+    @include font(16px, 18px);
+  }
+}
+
+.showall-card__text--bold {
+  @include font(16px, 20px);
+  color: $product-card-text-color;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    @include font(20px, 22px);
   }
 }

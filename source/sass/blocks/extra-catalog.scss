@@ -1,8 +1,4 @@
 .extra-catalog {
-  &__title {
-    @include font(24px, 24px);
-  }
-
   &__gift {
     font-family: "Arial", "Helvetica", sans-serif;
     color: $white;
@@ -10,20 +6,66 @@
   }
 }
 
+.extra-catalog__title {
+  @include font(24px, 24px);
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+  }
+}
+
+.extra-catalog__wrapper {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
 .extra-products {
   @include list-reset();
+
+  @media (min-width: $desktop-width) {
+    width: 70%;
+  }
+}
+
+.extra-product__item {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+}
+
+.extra-product__button {
+  @media (min-width: $tablet-width) {
+    width: 100%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 240px;
+  }
 }
 
 .extra-product {
-  &__name {
-    @include font(16px, 16px);
-    color: $product-card-text-color;
-    text-transform: uppercase;
-  }
-
-  &__quantity,
-  &__price {
+  &__feature {
     @include font(14px, 14px);
     color: $features-text-color;
   }
+}
+
+.extra-product__title {
+  @include font(16px, 16px);
+  color: $product-card-text-color;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
+}
+
+.extra-product__features {
+  display: flex;
+  justify-content: space-between;
 }
