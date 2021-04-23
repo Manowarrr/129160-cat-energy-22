@@ -1,5 +1,15 @@
-.main-catalog {
-  &__title {
-    @include font(36px, 36px);
+.main-catalog__title {
+  @include font(36px, 36px);
+
+  @media (min-width: $tablet-width) {
+    @include font(60px, 60px);
+  }
+}
+
+.main-catalog__list {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
 }
