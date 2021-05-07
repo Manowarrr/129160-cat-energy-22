@@ -1,14 +1,50 @@
 .feature {
-  @media (min-width: $tablet-width) {
-    width: 45%;
+  position: relative;
+
+  min-height: 53px;
+
+  padding-left: 28.572%;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    top: -3px;
+
+    display: block;
+    width: 60px;
+    height: 60px;
+
+    background-color: $button-background-color;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
-  @media (min-width: $desktop-width) {
-    width: 20%;
+  &--leaf::before {
+    background-image: url("../img/icon-leaf.svg");
+    background-size: 30px 32px;
+  }
+
+  &--boil::before {
+    background-image: url("../img/icon-boil.svg");
+    background-size: 29px 31px;
+  }
+
+  &--fork::before {
+    background-image: url("../img/icon-fork.svg");
+    background-size: 25px 30px;
+  }
+
+  &--clock::before {
+    background-image: url("../img/icon-clock.svg");
+    background-size: 32px 33px;
   }
 }
 
 .feature__description {
+  margin: 0;
+
   font-family: "Arial", "Helvetica", sans-serif;
 
   @include font(14px, 18px);
@@ -16,5 +52,47 @@
 
   @media (min-width: $tablet-width) {
     @include font(16px, 24px);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .feature {
+    position: relative;
+
+    width: 45.904%;
+    padding: 112px 11.3% 50px 0;
+
+    @include font(16px, 24px);
+
+    &::before {
+      top: 0;
+
+      width: 80px;
+      height: 80px;
+    }
+
+    &::after {
+      counter-increment: number;
+      content: counter(number);
+
+      position: absolute;
+      top: -40px;
+      right: 23.3%;
+      z-index: -1;
+
+      @include font(281px, 281px);
+      color: $programmes-background;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .feature {
+    width: 20.164%;
+    padding-right: 0;
+
+    &::after {
+      right: 5%;
+    }
   }
 }

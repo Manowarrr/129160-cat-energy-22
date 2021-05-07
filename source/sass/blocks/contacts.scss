@@ -1,24 +1,81 @@
 .contacts__info {
   display: flex;
+  justify-content: space-between;
+
+  padding: 28px 6.25%;
 }
 
 .contacts__offer {
+  max-width: 124px;
+  margin: 0;
+
   @include font(16px, 18px);
   color: $map-offer-text-color;
   text-transform: uppercase;
-
-  @media (min-width: $tablet-width) {
-    @include font(20px, 21px);
-  }
 }
 
 .contacts__address {
+  max-width: 135px;
+  margin: 0;
+
   font-family: "Arial", "Helvetica", sans-serif;
 
   @include font(14px, 20px);
   color: $features-text-color;
+}
 
-  @media (min-width: $tablet-width) {
+.contacts__map {
+  display: block;
+  border: none;
+  width: 100%;
+  max-width: 100%;
+  min-height: 363px;
+}
+
+@media (min-width: $tablet-width) {
+  .contacts__info {
+    padding: 65px 5.791% 51px;
+  }
+
+  .contacts__offer {
+    max-width: 160px;
+
+    @include font(20px, 21px);
+  }
+
+  .contacts__address {
+    max-width: 156px;
+
     @include font(16px, 20px);
+    text-align: right;
+  }
+
+  .contacts__map {
+    min-height: 395px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contacts__wrapper {
+    position: relative;
+  }
+
+  .contacts__info {
+    width: 46.721%;
+    padding: 65px 7.049% 57px 6.23%;
+    max-width: 570px;
+    position: absolute;
+    top: 95px;
+    background-color: $white;
+  }
+
+  .contacts__address {
+    max-width: 39%;
+
+    text-align: left;
+  }
+
+  .contacts__offer {
+    max-width: 27.193%;
   }
 }

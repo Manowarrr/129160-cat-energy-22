@@ -3,36 +3,131 @@
   font-weight: 500;
   text-transform: uppercase;
   text-align: center;
+}
 
-  @media (min-width: $tablet-width) {
-    width: 60%;
+.main-nav__toggle {
+  position: absolute;
+  top: 23px;
+  right: 5.938%;
 
-    @include font(18px, 24px);
-    font-weight: 400;
+  width: 24px;
+  height: 16px;
+  padding: 0;
+  border: none;
+
+  background-color: $white;
+}
+
+.main-nav--nojs {
+  .main-nav__toggle {
+    display: none;
+  }
+}
+
+.main-nav--opened {
+  .main-nav__toggle {
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      top: 8px;
+      left: 0;
+      width: 25px;
+      height: 2px;
+      background-color: $black;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.main-nav--closed {
+  .main-nav__toggle{
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 24px;
+      height: 2px;
+      background-color: $black;
+      box-shadow: 0 8px 0 0 $black, 0 16px 0 0 $black;
+    }
   }
 
-  @media (min-width: $desktop-width) {
-    width: 39%;
-
-    z-index: 2;
-
-    @include font(20px, auto);
+  .main-nav__list {
+    display: none;
   }
 }
 
 .main-nav__list {
   @include list-reset();
-
-  @media (min-width: $tablet-width) {
-    display: flex;
-    justify-content: space-between;
-  }
 }
 
 .main-nav__link {
-  color: $black;
+  display: block;
+  padding: 24px 0;
+  border-bottom: 1px solid $separate-line-color;
 
-  @media (min-width: $desktop-width) {
+  color: $black;
+}
+
+@media (min-width: $tablet-width) {
+  .main-nav {
+    width: 62.15%;
+
+    @include font(18px, 24px);
+    font-weight: 400;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .main-nav__link {
+    padding: 10px 0 7px 0;
+    border-bottom: none;
+  }
+
+  .main-nav__link:hover[href],
+  .main-nav__link:focus[href] {
+    opacity: 0.6;
+  }
+
+  .main-nav__link:active[href] {
+    opacity: 0.3;
+  }
+
+  .main-nav__link--active {
+    border-bottom: 2px solid $button-background-color;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-nav {
+    z-index: 2;
+
+    width: 39.2%;
+
+    @include font(20px, 25px);
+  }
+
+  .main-nav__link {
     color: $white;
+  }
+
+  .main-nav__link--active {
+    border-bottom: 2px solid $white;
   }
 }

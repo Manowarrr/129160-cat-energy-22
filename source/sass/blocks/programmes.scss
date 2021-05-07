@@ -1,7 +1,20 @@
+.programmes {
+  padding: 0 6.25%;
+  margin-bottom: 27px;
+}
+
 .programmes__list {
   @include list-reset();
+}
 
-  @media (min-width: $desktop-width) {
+@media (min-width: $tablet-width) {
+  .programmes {
+    padding: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .programmes__list {
     display: flex;
     justify-content: space-between;
   }
