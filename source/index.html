@@ -15,19 +15,19 @@
 
         <!-- logo -->
         <a class="page-header__logo">
-          <img src="img/logo-mobile.svg" width="191" height="39" alt="Функциональное питание для котов 'Cat Energy'">
+          <img class="page-header__logo-image" src="img/logo-mobile.svg" width="191" height="39" alt="Функциональное питание для котов 'Cat Energy'">
         </a>
 
         <!-- navigation -->
-        <nav class="main-nav">
+        <nav class="main-nav main-nav--nojs">
 
-          <button class="main-nav__toggle visually-hidden" type="button">
+          <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
 
           <ul class="main-nav__list">
             <li class="main-nav__item">
-              <a class="main-nav__link">Главная</a>
+              <a class="main-nav__link main-nav__link--active">Главная</a>
             </li>
             <li class="main-nav__item">
               <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
@@ -44,7 +44,7 @@
     </header>
 
     <!-- MAIN -->
-    <main>
+    <main class="main-page">
 
       <!-- PROMO -->
       <section class="promo">
@@ -74,7 +74,7 @@
 
           <ul class="programmes__list">
 
-            <li class="programmes__item programm">
+            <li class="programmes__item programm programm--slim">
               <h3 class="programm__title">Похудение</h3>
               <p class="programm__description">
                 Ваш кот весит больше собаки и почти утратил способность лазить по деревьям?
@@ -83,7 +83,7 @@
               <a class="programm__link" href="#">Каталог slim</a>
             </li>
 
-            <li class="programmes__item programm">
+            <li class="programmes__item programm programm--pro">
               <h3 class="programm__title">Набор массы</h3>
               <p class="programm__description">
                 Заработать авторитет среди дворовых котов и даже собак?
@@ -107,7 +107,7 @@
 
           <ul class="features__list">
 
-            <li class="features__item feature">
+            <li class="features__item feature feature--leaf">
               <p class="feature__description">
                 Функциональное питание
                 содержит только полезные
@@ -115,7 +115,7 @@
               </p>
             </li>
 
-            <li class="features__item feature">
+            <li class="features__item feature feature--boil">
               <p class="feature__description">
                 Выпускается в виде порошка,
                 который нужно лишь залить
@@ -123,7 +123,7 @@
               </p>
             </li>
 
-            <li class="features__item feature">
+            <li class="features__item feature feature--fork">
               <p class="feature__description">
                 Замените один-два приема
                 обычной еды на наше
@@ -131,7 +131,7 @@
               </p>
             </li>
 
-            <li class="features__item feature">
+            <li class="features__item feature feature--clock">
               <p class="feature__description">
                 Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
               </p>
@@ -198,24 +198,19 @@
       <!-- CONTACTS -->
       <section class="contacts">
 
-        <div class="container">
+        <h2 class="visually-hidden">Информация</h2>
 
-          <h2 class="visually-hidden">Информация</h2>
-
+        <div class="contacts__wrapper container">
           <section class="contacts__info">
-
-            <h3 class="visually-hidden">Информация</h3>
 
             <p class="contacts__offer">Приглашаем к сотрудничеству дилеров!</p>
 
             <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
 
           </section>
-
-          <div class="map">
-          </div>
-
         </div>
+
+          <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533268!2d30.320858716070596!3d59.938716481876156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1575664050065!5m2!1sru!2sru" allowfullscreen=""></iframe>
 
       </section>
 

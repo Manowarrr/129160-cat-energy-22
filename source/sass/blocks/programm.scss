@@ -1,13 +1,68 @@
 .programm {
+  position: relative;
+
+  padding: 31px 7.143% 22px;
+
   background-color: $programmes-background;
 
-  @media (min-width: $desktop-width) {
-    width: 45%;
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 16px;
+    left: 4.643%;
+
+    display: block;
+    width: 68px;
+    height: 68px;
+
+    background-repeat: no-repeat;
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    bottom: 56px;
+
+    display: block;
+    height: 1px;
+    width: 85.714%;
+
+    background-color: $black;
+
+    opacity: 0.1;
+  }
+
+  &--pro::before {
+    background-image: url("../img/cat-pro.svg"),
+    radial-gradient(circle, $button-background-color 24px, transparent 25px);
+
+    background-size: 67px 28px, auto;
+    background-position: center, 0 0;
+  }
+}
+
+.programm--slim {
+  margin-bottom: 20px;
+
+  &::before {
+    background-image: url("../img/cat-slim.svg"),
+    radial-gradient(circle, $button-background-color 25px, transparent 26px);
+
+    background-size: 35px 49px, auto;
+    background-position: center 6px, 0 0;
   }
 }
 
 .programm__title {
+  margin: 0;
+  margin-bottom: 30px;
+  padding-left: 29.5%;
+
   @include font(24px, 37px);
+  font-weight: normal;
+  text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
     @include font(36px, 36px);
@@ -15,6 +70,8 @@
 }
 
 .programm__description {
+  margin-bottom: 38px;
+
   font-family: "Arial", "Helvetica", sans-serif;
 
   @include font(14px, 18px);
@@ -26,7 +83,120 @@
 }
 
 .programm__link {
+  position: relative;
+
   @include font(16px, 16px);
   color: $black;
   text-transform: uppercase;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    bottom: 5px;
+    right: -45px;
+
+    display: block;
+    width: 24px;
+    height: 12px;
+
+    background-image: url("../img/programm-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: -9px 0;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:focus::after,
+  &:hover::after {
+    background-position: 0 0;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .programm {
+    padding: 78px 39.4% 57px 7.345%;
+
+    &::before {
+      left: auto;
+      right: 3.955%;
+      top: 59px;
+
+      width: 268px;
+      height: 268px;
+    }
+
+    &--slim::before {
+      background-image: url("../img/cat-slim.svg"),
+        radial-gradient(circle, $button-background-color 100px, transparent 101px);
+
+      background-size: 141px 194px, auto;
+      background-position: center 21px, 0 0;
+    }
+
+    &--pro::before {
+      background-image: url("../img/cat-pro.svg"),
+        radial-gradient(circle, $button-background-color 100px, transparent 101px);
+
+      background-size: 268px 113px, auto;
+      background-position: center, 0 0;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .programm__title {
+    padding: 0;
+    margin-bottom: 24px;
+  }
+
+  .programm__description {
+    margin-bottom: 48px;
+  }
+
+}
+
+@media (min-width: $desktop-width) {
+  .programm {
+    width: 46.722%;
+    padding: 75px 4.263% 57px;
+
+    &--slim {
+      margin-bottom: 0;
+    }
+
+    &::before {
+      left: 34px;
+      right: auto;
+      top: 30px;
+
+      width: 135px;
+      height: 135px;
+    }
+  }
+
+  .programm--slim::before {
+    background-image: url("../img/cat-slim.svg"),
+      radial-gradient(circle, $button-background-color 50px, transparent 51px);
+
+    background-size: 71px 97px, auto;
+    background-position: center 11px, 0 0;
+  }
+
+  .programm--pro::before {
+    background-image: url("../img/cat-pro.svg"),
+      radial-gradient(circle, $button-background-color 50px, transparent 51px);
+
+    background-size: 134px 57px, auto;
+    background-position: center, 0 0;
+  }
+
+  .programm__title {
+    margin-bottom: 73px;
+    padding-left: 35.1%;
+  }
 }
