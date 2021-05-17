@@ -1,80 +1,288 @@
-.programm-form__info {
-  @media (min-width: $desktop-width) {
-    display: flex;
+.programm-form__group {
+  margin: 0;
+  padding: 20px 0;
 
-    .programm-form__group {
-      width: 40%;
-    }
+  border: 0 none;
+
+  &--programmes {
+    border-top: 1px solid $fieldset-border;
+    border-bottom: 1px solid $fieldset-border;
   }
 }
 
-.programm-form__title {
-  @include font(36px, 36px);
+.programm-form__header {
+  position: relative;
 
-  @media (min-width: $tablet-width) {
-    @include font(60px, 60px);
-  }
-}
+  margin-bottom: 35px;
 
-.programm-form__description {
-  @include font(14px, 18px);
-  text-transform: uppercase;
+  &::after {
+    content: "";
 
-  @media (min-width: $tablet-width) {
-    @include font(20px, 30px);
-  }
-}
+    position: absolute;
+    top: 13px;
+    z-index: -1;
 
-.programm-form__group-wrapper {
-  display: flex;
-}
-
-.programm-form__label,
-.programm-form__input::placeholder {
-  @include font(16px, 18px);
-  color: $features-text-color;
-  text-transform: uppercase;
-
-  @media (min-width: $tablet-width) {
-    @include font(20px, 20px);
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: $button-background-color;
   }
 }
 
 .programm-form__group-name {
+  display: inline-block;
+  margin: 0;
+  vertical-align: top;
+  padding: 0 6.25%;
+  max-width: 69.375%;
+
   @include font(24px, 26px);
+  text-transform: none;
+  font-weight: normal;
 
-  @media (min-width: $tablet-width) {
-    @include font(36px, 36px);
-  }
+  background-color: white;
 }
 
-.programm-form__group--additional {
-  @media (min-width: $tablet-width) {
-    display: flex;
-    flex-wrap: wrap;
-
-    .programm-form__group-wrapper {
-      width: 45%;
-    }
-  }
-
-  @media (min-width: $desktop-width) {
-    @include font(36px, 36px);
-
-    .programm-form__group-wrapper {
-      width: 20%;
-    }
-  }
-}
-
-.programm-form__group--contacts {
-  @media (min-width: $desktop-width) {
-    display: flex;
-  }
+.programm-form__group-wrapper {
+  padding: 0 6.25%;
 }
 
 .programm-form__submit {
-  @media (min-width: $tablet-width) {
+  padding: 0 6.25%;
+}
+
+.programm-form__option-group {
+  position: relative;
+
+  margin-bottom: 25px;
+  padding-left: 45px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.programm-form__label-input {
+  position: relative;
+
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 14px;
+
+  @include font(16px, 18px);
+  color: $features-text-color;
+  text-transform: uppercase;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.programm-form__label-option {
+  @include font(16px, 18px);
+  color: $product-card-text-color;
+  text-transform: uppercase;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: -6px;
+    left: 0;
+
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid $input-border-hover;
+
+    background-repeat: no-repeat;
+  }
+
+  &:hover::before {
+    border: 1px solid $option-hover;
+  }
+
+  &--radio::before {
+    border-radius: 50%;
+  }
+}
+
+.programm-form__input-option:checked + .programm-form__label-option--radio::before {
+  background-image: radial-gradient(circle, $button-background-color 40%, white 30%);
+}
+
+.programm-form__input-option:checked + .programm-form__label-option--checkbox::before {
+  background-image: url("../img/checkbox.svg");
+  background-size: 22px 17px;
+  background-position: center;
+}
+
+.programm-form__label-name {
+  flex-shrink: 0;
+  margin-right: 5.5%;
+}
+
+.programm-form__input {
+  flex-grow: 1;
+  flex-shrink: 1;
+  min-width: 0;
+}
+
+.programm-form__textarea,
+.programm-form__input {
+
+  padding: 12px 0 12px 15px;
+
+  border: 1px solid $input-border;
+
+  font-family: "Oswald", "Arial", sans-serif;
+  @include font(16px, 18px);
+  color: $features-text-color;
+  text-transform: uppercase;
+
+  &:hover {
+    border: 1px solid $input-border-hover;
+  }
+}
+
+.programm-form__btn {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.programm-form__note {
+  display: block;
+  text-align: center;
+  @include font(14px, 16px);
+}
+
+.programm-form__textarea {
+  width: 100%;
+  min-height: 149px;
+
+  resize: none;
+}
+
+@media (min-width: $tablet-width) {
+  .programm-form__info {
+    padding: 0 40px;
+
+    .programm-form__group-wrapper {
+      padding: 0;
+    }
+  }
+
+  .programm-form__group {
+    padding: 35px 0;
+
+    &--programmes {
+      border: 1px solid $fieldset-border;
+      padding-left:  30px;
+    }
+  }
+
+  .programm-form__group--additional {
+    .programm-form__group-wrapper {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .programm-form__option-group:nth-child(2n) {
+      width: 45.5%;
+    }
+
+    .programm-form__option-group:nth-child(2n-1) {
+      width: 54.5%;
+    }
+  }
+
+  .programm-form__group-wrapper {
+    padding: 0 40px;
+  }
+
+  .programm-form__header {
+    &::after {
+      left: 0;
+      top: 22px;
+    }
+  }
+
+  .programm-form__group-name {
+    margin: 0;
+    padding: 0 40px;
+    max-width: none;
+
+    @include font(36px, 36px);
+  }
+
+  .programm-form__label-input {
+    @include font(20px, 20px);
+  }
+
+  .programm-form__label-option {
+    @include font(20px, 20px);
+  }
+
+  .programm-form__input {
+    padding: 13px 0 14px 18px;
+  }
+
+  .programm-form__submit {
     display: flex;
+    padding: 0 40px;
+  }
+
+  .programm-form__btn {
+    width: 45.5%;
+    margin-right: 9.71%;
+  }
+
+  .programm-form__note {
+    text-align: left;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .programm-form__info {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+
+    .programm-form__group {
+      width: 46.722%;
+    }
+  }
+
+  .programm-form__group--contacts {
+    .programm-form__group-wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .programm-form__label-input {
+      width: 46.722%;
+    }
+  }
+
+  .programm-form__group--additional {
+    @include font(36px, 36px);
+
+    .programm-form__option-group:nth-child(2n),
+    .programm-form__option-group:nth-child(2n-1) {
+      width: 25%;
+    }
+  }
+
+  .programm-form__group-wrapper {
+    padding: 0;
+  }
+
+  .programm-form__group-name {
+    padding: 0;
+  }
+
+  .programm-form__submit {
+    padding: 0;
   }
 }

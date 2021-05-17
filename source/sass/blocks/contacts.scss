@@ -1,8 +1,9 @@
 .contacts__info {
   display: flex;
   justify-content: space-between;
-
   padding: 28px 6.25%;
+
+  background-color: $programmes-background;
 }
 
 .contacts__offer {

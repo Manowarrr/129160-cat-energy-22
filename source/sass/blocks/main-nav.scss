@@ -123,11 +123,11 @@
     @include font(20px, 25px);
   }
 
-  .main-nav__link {
+  .main-nav--index .main-nav__link {
     color: $white;
   }
 
-  .main-nav__link--active {
+  .main-mav--index .main-nav__link--active {
     border-bottom: 2px solid $white;
   }
 }
