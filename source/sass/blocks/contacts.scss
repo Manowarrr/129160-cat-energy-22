@@ -1,9 +1,11 @@
 .contacts__info {
   display: flex;
   justify-content: space-between;
-  padding: 28px 6.25%;
+}
 
-  background-color: $programmes-background;
+.contacts__wrapper {
+  padding-top: 28px;
+  padding-bottom: 28px;
 }
 
 .contacts__offer {
@@ -34,8 +36,18 @@
 }
 
 @media (min-width: $tablet-width) {
+  .contacts__wrapper {
+    padding-top: 66px;
+    padding-bottom: 51px;
+  }
+
   .contacts__info {
-    padding: 65px 5.791% 51px;
+    padding: 0 41px;
+  }
+
+  .contacts__city {
+    display: block;
+    padding-top: 20px;
   }
 
   .contacts__offer {
@@ -52,31 +64,31 @@
   }
 
   .contacts__map {
-    min-height: 395px;
+    height: 400px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .contacts__wrapper {
     position: relative;
+    padding: 0;
   }
 
   .contacts__info {
-    width: 46.721%;
     padding: 65px 7.049% 57px 6.23%;
-    max-width: 570px;
+    width: 570px;
     position: absolute;
     top: 95px;
     background-color: $white;
   }
 
   .contacts__address {
-    max-width: 39%;
+    max-width: 155px;
 
     text-align: left;
   }
 
   .contacts__offer {
-    max-width: 27.193%;
+    max-width: 163px;
   }
 }
