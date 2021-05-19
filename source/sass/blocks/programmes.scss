@@ -1,6 +1,6 @@
 .programmes {
-  padding: 0 6.25%;
   margin-bottom: 27px;
+  padding-top: 22px;
 }
 
 .programmes__list {
@@ -14,8 +14,13 @@
 }
 
 @media (min-width: $desktop-width) {
+  .programmes {
+    padding-top: 82px;
+  }
+
   .programmes__list {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 }
