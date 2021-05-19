@@ -32,7 +32,7 @@
   width: 320px;
   margin: 0 auto;
 
-  background-image: url("../../img/cat-fat-mobile@1x.png");
+  background-image: url("../img/cat-fat-mobile@1x.png");
   background-repeat: no-repeat;
   background-position: -19px 0;
 }
@@ -40,7 +40,7 @@
 @media (min-resolution: $retina-dpi),
   (min-resolution: $retina-dppx) {
   .slider__item--was {
-    background-image: url("../../img/cat-fat-mobile@2x.png");
+    background-image: url("../img/cat-fat-mobile@2x.png");
     background-size: 320px 240px;
   }
 }
@@ -121,7 +121,7 @@
     margin-left: auto;
     margin-right: 0;
 
-    background-image: url("../../img/cat-fat-tablet@1x.png");
+    background-image: url("../img/cat-fat-tablet@1x.png");
     background-position: center left 15px;
   }
 
@@ -140,7 +140,7 @@
     clip-path: none;
     clip: auto;
 
-    background-image: url("../../img/cat-skinny-tablet@1x.png");
+    background-image: url("../img/cat-skinny-tablet@1x.png");
     background-position: center right 55px;
     background-repeat: no-repeat;
   }
@@ -148,12 +148,12 @@
   @media (min-resolution: $retina-dpi),
     (min-resolution: $retina-dppx) {
     .slider__item--was {
-      background-image: url("../../img/cat-fat-tablet@2x.png");
+      background-image: url("../img/cat-fat-tablet@2x.png");
       background-size: 690px 517px;
     }
 
     .slider__item--become {
-      background-image: url("../../img/cat-skinny-tablet@2x.png");
+      background-image: url("../img/cat-skinny-tablet@2x.png");
       background-size: 690px 517px;
     }
   }
