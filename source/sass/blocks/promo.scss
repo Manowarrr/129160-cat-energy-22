@@ -16,7 +16,7 @@
     width: 100%;
 
     background-color: $mobile-promo-background;
-    background-image: url("../../img/index-background-mobile@1x.jpg");
+    background-image: url("../img/index-background-mobile@1x.jpg");
     background-position: 0 center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -26,7 +26,7 @@
 @media (min-resolution: $retina-dpi),
   (min-resolution: $retina-dppx) {
   .promo::before {
-    background-image: url("../../img/index-background-mobile@2x.jpg");
+    background-image: url("../img/index-background-mobile@2x.jpg");
   }
 }
 

@@ -1,4 +1,9 @@
 .copyright {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+
   font-family: "Arial", "Helvetica", sans-serif;
 
   @include font(16px, 18px);
@@ -9,4 +14,10 @@
 .copyright__link {
   @include font(16px, 16px);
   color: $features-text-color;
+}
+
+@media (min-width: $tablet-width) {
+  .copyright {
+    width: 165px;
+  }
 }

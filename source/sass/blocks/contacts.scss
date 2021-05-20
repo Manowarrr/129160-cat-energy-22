@@ -6,6 +6,10 @@
 .contacts__wrapper {
   padding-top: 28px;
   padding-bottom: 28px;
+
+  &--form {
+    background-color: $programmes-background;
+  }
 }
 
 .contacts__offer {
