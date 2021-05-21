@@ -1,25 +1,61 @@
-.programm-form__group {
-  margin: 0;
-  padding: 20px 0;
+.programm-form {
+  position: relative;
 
-  border: 0 none;
+  &::after {
+    content: "";
 
-  &--programmes {
-    border-top: 1px solid $fieldset-border;
-    border-bottom: 1px solid $fieldset-border;
+    position: absolute;
+    top: 185px;
+
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: $fieldset-border;
+  }
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 342px;
+
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: $fieldset-border;
   }
 }
 
-.programm-form__header {
+.programm-form__group {
+  border: 0 none;
+  position: relative;
+}
+
+.programm-form__info {
+  .programm-form__group {
+    &:first-child {
+      margin-bottom: 46px;
+    }
+
+    &:last-child {
+      margin-bottom: 45px;
+      padding-top: 9px;
+    }
+  }
+}
+
+.programm-form__header-wrapper {
   position: relative;
 
+  width: 320px;
+  margin: 0 auto;
   margin-bottom: 35px;
 
   &::after {
     content: "";
 
     position: absolute;
-    top: 13px;
+    top: 15px;
     z-index: -1;
 
     display: block;
@@ -29,33 +65,45 @@
   }
 }
 
+.programm-form__group--contacts {
+  padding-top: 5px;
+  margin-bottom: 25px;
+}
+
+.programm-form__group--comments {
+  margin-bottom: 23px;
+
+  .programm-form__header-wrapper {
+    margin-bottom: 39px;
+  }
+}
+
+.programm-form__group--additional {
+  margin-bottom: 38px;
+
+  .programm-form__header-wrapper {
+    margin-bottom: 40px;
+  }
+}
+
 .programm-form__group-name {
   display: inline-block;
+  padding: 0 20px;
+  max-width: 69.375%;
   margin: 0;
   vertical-align: top;
-  padding: 0 6.25%;
-  max-width: 69.375%;
 
   @include font(24px, 26px);
   text-transform: none;
   font-weight: normal;
 
-  background-color: white;
-}
-
-.programm-form__group-wrapper {
-  padding: 0 6.25%;
-}
-
-.programm-form__submit {
-  padding: 0 6.25%;
+  background-color: $white;
 }
 
 .programm-form__option-group {
   position: relative;
 
   margin-bottom: 25px;
-  padding-left: 45px;
 
   &:last-child {
     margin-bottom: 0;
@@ -79,6 +127,8 @@
 }
 
 .programm-form__label-option {
+  padding-left: 45px;
+
   @include font(16px, 18px);
   color: $product-card-text-color;
   text-transform: uppercase;
@@ -119,13 +169,12 @@
 
 .programm-form__label-name {
   flex-shrink: 0;
-  margin-right: 5.5%;
+  margin-right: 13px;
 }
 
 .programm-form__input {
   flex-grow: 1;
   flex-shrink: 1;
-  min-width: 0;
 }
 
 .programm-form__textarea,
@@ -152,6 +201,8 @@
 
 .programm-form__note {
   display: block;
+
+  font-family: "Arial", "Helvetica", sans-serif;
   text-align: center;
   @include font(14px, 16px);
 }
@@ -164,48 +215,105 @@
 }
 
 @media (min-width: $tablet-width) {
-  .programm-form__info {
-    padding: 0 40px;
+  .programm-form {
+    &::after,
+    &::before {
+      display: none;
+    }
+  }
 
-    .programm-form__group-wrapper {
-      padding: 0;
+  .programm-form__info {
+    padding: 0 70px;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+
+    .programm-form__group {
+      &:first-child {
+        margin-bottom: 72px;
+      }
+
+      &:last-child {
+        padding: 30px 0;
+        margin-bottom: 70px;
+      }
     }
   }
 
   .programm-form__group {
-    padding: 35px 0;
-
     &--programmes {
       border: 1px solid $fieldset-border;
-      padding-left:  30px;
+
+      .programm-form__option-group {
+        margin-bottom: 35px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .programm-form__group-wrapper {
+    padding: 0 70px;
+  }
+
+  .programm-form__header-wrapper {
+    width: 768px;
+    padding: 0 30px;
+    margin-bottom: 76px;
+
+    &::after {
+      left: 0;
+      top: 21px;
     }
   }
 
   .programm-form__group--additional {
+    margin-bottom: 43px;
+
     .programm-form__group-wrapper {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
     }
 
-    .programm-form__option-group:nth-child(2n) {
-      width: 45.5%;
+    .programm-form__header-wrapper {
+      margin-bottom: 65px;
     }
 
-    .programm-form__option-group:nth-child(2n-1) {
-      width: 54.5%;
+    .programm-form__option-group{
+      &:nth-child(1),
+      &:nth-child(1) {
+        margin-bottom: 50px;
+      }
+
+      &:nth-child(2n) {
+        width: 45.5%;
+      }
+
+      &:nth-child(2n-1) {
+        width: 54.5%;
+      }
     }
   }
 
-  .programm-form__group-wrapper {
-    padding: 0 40px;
+  .programm-form__group--contacts {
+    margin-bottom: 65px;
   }
 
-  .programm-form__header {
-    &::after {
-      left: 0;
-      top: 22px;
+  .programm-form__group--comments {
+    margin-bottom: 65px;
+
+    .programm-form__header-wrapper {
+      margin-bottom: 76px;
     }
+  }
+
+  .programm-form__textarea {
+    min-height: 174px;
   }
 
   .programm-form__group-name {
@@ -215,30 +323,65 @@
 
     @include font(36px, 36px);
   }
+  .programm-form__textarea,
+  .programm-form__input {
+    padding: 10px 0 11px 22px;
+
+    @include font(20px, 30px);
+  }
 
   .programm-form__label-input {
-    @include font(20px, 20px);
+    margin-bottom: 20px;
+
+    @include font(20px, 30px);
   }
 
   .programm-form__label-option {
     @include font(20px, 20px);
-  }
 
-  .programm-form__input {
-    padding: 13px 0 14px 18px;
+    &--radio {
+      padding-left: 88px;
+
+      &::before {
+        top: -10px;
+        left: 28px;
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    &--checkbox {
+      padding-left: 60px;
+
+      &::before {
+        top: -10px;
+        left: 0;
+        width: 40px;
+        height: 40px;
+      }
+    }
   }
 
   .programm-form__submit {
     display: flex;
-    padding: 0 40px;
+    padding: 0 70px;
   }
 
   .programm-form__btn {
-    width: 45.5%;
-    margin-right: 9.71%;
+    width: 282px;
+    margin-right: 60px;
+    margin-bottom: 0;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    align-self: center;
+
+    @include font(20px, 20px);
   }
 
   .programm-form__note {
+    align-self: center;
+
+    @include font(16px, 16px);
     text-align: left;
   }
 }
@@ -250,27 +393,46 @@
     padding: 0;
 
     .programm-form__group {
-      width: 46.722%;
+      &:first-child,
+      &:last-child {
+        width: 569px;
+        margin-bottom: 65px;
+      }
     }
   }
 
+  .programm-form__header-wrapper {
+    max-width: 1440px;
+    width: 1440px;
+    padding: 0 70px;
+  }
+
   .programm-form__group--contacts {
+    padding-top: 0;
+    margin-bottom: 47px;
+
     .programm-form__group-wrapper {
       display: flex;
       justify-content: space-between;
     }
 
     .programm-form__label-input {
-      width: 46.722%;
+      width: 569px;
     }
   }
 
   .programm-form__group--additional {
+    margin-bottom: 20px;
+
     @include font(36px, 36px);
 
     .programm-form__option-group:nth-child(2n),
     .programm-form__option-group:nth-child(2n-1) {
-      width: 25%;
+      width: 221px;
+    }
+
+    .programm-form__header-wrapper {
+      margin-bottom: 55px;
     }
   }
 
@@ -279,10 +441,23 @@
   }
 
   .programm-form__group-name {
-    padding: 0;
+    padding: 0 40px;
+  }
+
+  .programm-form__label-option {
+    &--checkbox {
+      &::before {
+        top: 5px;
+      }
+    }
   }
 
   .programm-form__submit {
     padding: 0;
+  }
+
+  .programm-form__btn {
+    width: 568px;
+    margin-right: 81px;
   }
 }

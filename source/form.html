@@ -15,11 +15,15 @@
 
         <!-- logo -->
         <a class="page-header__logo">
-          <img class="page-header__logo-image" src="img/logo-mobile.svg" width="191" height="39" alt="Функциональное питание для котов 'Cat Energy'">
+          <picture>
+            <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img class="page-header__image" src="img/logo-mobile.svg" width="191" height="39"  alt="Магазин Cat Energy">
+          </picture>
         </a>
 
         <!-- navigation -->
-        <nav class="main-nav">
+        <nav class="main-nav main-nav--nojs main-nav--closed">
 
           <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
@@ -27,13 +31,13 @@
 
           <ul class="main-nav__list">
             <li class="main-nav__item">
-              <a class="main-nav__link main-nav__link--active">Главная</a>
+              <a class="main-nav__link" href="index.html">Главная</a>
             </li>
             <li class="main-nav__item">
               <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__link" href="form.html">Подбор программы</a>
+              <a class="main-nav__link main-nav__link--active">Подбор программы</a>
             </li>
           </ul>
 
@@ -64,135 +68,121 @@
 
             <fieldset class="programm-form__group">
 
-              <div class="programm-form__group-wrapper">
+              <label class="programm-form__label-input">
+                <span class="programm-form__label-name">Имя:*</span>
+                <input class="programm-form__input" type="text" placeholder="Барсик">
+              </label>
 
-                <label class="programm-form__label-input">
-                  <span class="programm-form__label-name">Имя:*</span>
-                  <input class="programm-form__input" type="text" placeholder="Барсик">
-                </label>
+              <label class="programm-form__label-input">
+                <span class="programm-form__label-name">Вес (кг):*</span>
+                <input class="programm-form__input" type="text" placeholder="7">
+              </label>
 
-                <label class="programm-form__label-input">
-                  <span class="programm-form__label-name">Вес (кг):*</span>
-                  <input class="programm-form__input" type="text" placeholder="7">
-                </label>
-
-                <label class="programm-form__label-input">
-                  <span class="programm-form__label-name">Возраст (лет):</span>
-                  <input class="programm-form__input" type="text" placeholder="7">
-                </label>
-
-              </div>
+              <label class="programm-form__label-input">
+                <span class="programm-form__label-name">Возраст (лет):</span>
+                <input class="programm-form__input" type="text" placeholder="7">
+              </label>
 
             </fieldset>
 
             <fieldset class="programm-form__group programm-form__group--programmes">
 
-              <div class="programm-form__group-wrapper">
+              <div class="programm-form__option-group">
+                <input class="programm-form__input-option visually-hidden" id="loss" type="radio" value="loss" name="programm-type">
+                <label class="programm-form__label-option programm-form__label-option--radio"  for="loss">Похудение</label>
+              </div>
 
-                <div class="programm-form__option-group">
-                  <input class="programm-form__input-option visually-hidden" id="loss" type="radio" value="loss" name="programm-type">
-                  <label class="programm-form__label-option programm-form__label-option--radio"  for="loss">Похудение</label>
-                </div>
+              <div class="programm-form__option-group">
+                <input class="programm-form__input-option visually-hidden" id="gain" type="radio" value="gain" name="programm-type">
+                <label class="programm-form__label-option programm-form__label-option--radio"  for="gain">Набор массы</label>
+              </div>
 
-                <div class="programm-form__option-group">
-                  <input class="programm-form__input-option visually-hidden" id="gain" type="radio" value="gain" name="programm-type">
-                  <label class="programm-form__label-option programm-form__label-option--radio"  for="gain">Набор массы</label>
-                </div>
-
-                <div class="programm-form__option-group">
-                  <input class="programm-form__input-option visually-hidden" id="dont-know" type="radio" value="dont-know" name="programm-type">
-                  <label class="programm-form__label-option programm-form__label-option--radio"  for="dont-know">Не знаю (нужен ваш совет)</label>
-                </div>
-
+              <div class="programm-form__option-group">
+                <input class="programm-form__input-option visually-hidden" id="dont-know" type="radio" value="dont-know" name="programm-type">
+                <label class="programm-form__label-option programm-form__label-option--radio"  for="dont-know">Не знаю (нужен ваш совет)</label>
               </div>
 
             </fieldset>
 
           </div>
 
-            <fieldset class="programm-form__group programm-form__group--contacts">
+          <fieldset class="programm-form__group programm-form__group--contacts">
 
-              <header class="programm-form__header">
-                <div class="programm-form__header-wrapper container">
-                  <h2 class="programm-form__group-name">
-                    Контактные данные (владельца кота)
-                  </h2>
-                </div>
-              </header>
-
-              <div class="programm-form__group-wrapper container">
-
-                <label class="programm-form__label-input">
-                  <span class="programm-form__label-name" for="email">E-mail:*</span>
-                  <input class="programm-form__input" id="email" type="email" placeholder="kuklachev@gmail.com">
-                </label>
-
-                <label class="programm-form__label-input">
-                  <span class="programm-form__label-name" for="phone">Телефон:*</span>
-                  <input class="programm-form__input" id="phone" type="tel" placeholder="8 (960) 900-60-90">
-                </label>
-
-              </div>
-
-            </fieldset>
-
-            <fieldset class="programm-form__group">
-
-              <header class="programm-form__header">
-                <div class="programm-form__header-wrapper container">
-                  <h2 class="programm-form__group-name">
-                    Комментарий
-                  </h2>
-                </div>
-              </header>
-
-              <div class="programm-form__group-wrapper container">
-                <label class="programm-form__label visually-hidden" for="comment">Комментарий</label>
-                <textarea class="programm-form__textarea" id="comment" placeholder="расскажите обо всех повадках кота"></textarea>
-              </div>
-
-            </fieldset>
-
-            <fieldset class="programm-form__group programm-form__group--additional">
-
-              <header class="programm-form__header">
-                <div class="programm-form__header-wrapper container">
-                  <h2 class="programm-form__group-name">
-                    Дополнительно
-                  </h2>
-                </div>
-              </header>
-
-              <div class="programm-form__group-wrapper container">
-
-                <div class="programm-form__option-group">
-                  <input class="programm-form__input-option visually-hidden" type="checkbox" id="sugar" name="additionally" value="sugar" checked>
-                  <label class="programm-form__label-option programm-form__label-option--checkbox" for="sugar">Сахарозаменитель</label>
-                </div>
-
-                <div class="programm-form__option-group">
-                  <input class="programm-form__input-option visually-hidden" type="checkbox" id="water" name="additionally" value="water" checked>
-                  <label class="programm-form__label-option programm-form__label-option--checkbox" for="water">Питьевая вода</label>
-                </div>
-
-                <div class="programm-form__option-group">
-                  <input class="programm-form__input-option visually-hidden" type="checkbox" id="milk" name="additionally" value="milk" checked>
-                  <label class="programm-form__label-option programm-form__label-option--checkbox" for="milk">Молоко</label>
-                </div>
-
-                <div class="programm-form__option-group">
-                  <input class="programm-form__input-option visually-hidden" type="checkbox" id="vitamins" name="additionally" value="vitamins" checked>
-                  <label class="programm-form__label-option programm-form__label-option--checkbox" for="vitamins">Витамины</label>
-                </div>
-
-              </div>
-
-            </fieldset>
-
-            <div class="programm-form__submit container">
-              <button class="programm-form__btn button" type="submit">Отправить заявку</button>
-              <span class="programm-form__note">* - Обязательные поля</span>
+            <div class="programm-form__header-wrapper">
+              <h2 class="programm-form__group-name">
+                Контактные данные (владельца кота)
+              </h2>
             </div>
+
+            <div class="programm-form__group-wrapper container">
+
+              <label class="programm-form__label-input">
+                <span class="programm-form__label-name" for="email">E-mail:*</span>
+                <input class="programm-form__input" id="email" type="email" placeholder="kuklachev@gmail.com">
+              </label>
+
+              <label class="programm-form__label-input">
+                <span class="programm-form__label-name" for="phone">Телефон:*</span>
+                <input class="programm-form__input" id="phone" type="tel" placeholder="8 (960) 900-60-90">
+              </label>
+
+            </div>
+
+          </fieldset>
+
+          <fieldset class="programm-form__group programm-form__group--comments">
+
+              <div class="programm-form__header-wrapper">
+                <h2 class="programm-form__group-name">
+                  Комментарий
+                </h2>
+              </div>
+
+            <div class="programm-form__group-wrapper container">
+              <label class="programm-form__label visually-hidden" for="comment">Комментарий</label>
+              <textarea class="programm-form__textarea" id="comment" placeholder="расскажите обо всех повадках кота"></textarea>
+            </div>
+
+          </fieldset>
+
+          <fieldset class="programm-form__group programm-form__group--additional">
+
+            <div class="programm-form__header-wrapper">
+              <h2 class="programm-form__group-name">
+                Дополнительно
+              </h2>
+            </div>
+
+            <div class="programm-form__group-wrapper container">
+
+              <div class="programm-form__option-group">
+                <input class="programm-form__input-option visually-hidden" type="checkbox" id="sugar" name="additionally" value="sugar" checked>
+                <label class="programm-form__label-option programm-form__label-option--checkbox" for="sugar">Сахарозаменитель</label>
+              </div>
+
+              <div class="programm-form__option-group">
+                <input class="programm-form__input-option visually-hidden" type="checkbox" id="water" name="additionally" value="water" checked>
+                <label class="programm-form__label-option programm-form__label-option--checkbox" for="water">Питьевая вода</label>
+              </div>
+
+              <div class="programm-form__option-group">
+                <input class="programm-form__input-option visually-hidden" type="checkbox" id="milk" name="additionally" value="milk" checked>
+                <label class="programm-form__label-option programm-form__label-option--checkbox" for="milk">Молоко</label>
+              </div>
+
+              <div class="programm-form__option-group">
+                <input class="programm-form__input-option visually-hidden" type="checkbox" id="vitamins" name="additionally" value="vitamins" checked>
+                <label class="programm-form__label-option programm-form__label-option--checkbox" for="vitamins">Витамины</label>
+              </div>
+
+            </div>
+
+          </fieldset>
+
+          <div class="programm-form__submit container">
+            <button class="programm-form__btn button" type="submit">Отправить заявку</button>
+            <span class="programm-form__note">* — Обязательные поля</span>
+          </div>
 
         </form>
 
@@ -203,19 +193,19 @@
 
         <h2 class="visually-hidden">Информация</h2>
 
-        <div class="contacts__wrapper container">
+        <div class="contacts__wrapper contacts__wrapper--form container">
           <section class="contacts__info">
 
-            <p class="contacts__offer">Приглашаем к сотрудничеству дилеров!</p>
+            <p class="contacts__offer">Приглашаем <br>к сотрудничеству дилеров!</p>
 
-            <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+            <p class="contacts__address">ул. Большая Конюшенная, д. 19/8
+              <span class="contacts__city">Санкт-Петербург</span>
+            </p>
 
           </section>
         </div>
 
-          <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533268!2d30.320858716070596!3d59.938716481876156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1575664050065!5m2!1sru!2sru" allowfullscreen=""></iframe>
-
-      </section>
+        <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533268!2d30.320858716070596!3d59.938716481876156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1575664050065!5m2!1sru!2sru" allowfullscreen=""></iframe>
 
       </section>
 
@@ -256,5 +246,6 @@
 
     </footer>
 
+    <script src="js/script.js"></script>
   </body>
 </html>

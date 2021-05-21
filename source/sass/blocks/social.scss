@@ -1,3 +1,27 @@
-.social__list {
+.social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 130px;
+
   @include list-reset();
+
+  padding: 20px 0;
+}
+
+.social__link:focus .social__image,
+.social__link:hover .social__image {
+  fill: $button-background-color;
+}
+
+.social__link:active .social__image {
+  fill: $button-background-color;
+  opacity: 0.3;
+}
+
+@media (min-width: $tablet-width) {
+  .social__image--vk {
+    width: 29px;
+    height: 17px;
+  }
 }
