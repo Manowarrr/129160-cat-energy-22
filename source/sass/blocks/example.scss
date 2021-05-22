@@ -9,6 +9,7 @@
   margin-bottom: 25px;
 
   font-family: "Arial", "Helvetica", sans-serif;
+
   @include font(14px, 18px);
   color: $features-text-color;
 }
@@ -51,6 +52,7 @@
   margin-top: -9px;
 
   font-family: "Arial", "Helvetica", sans-serif;
+
   @include font(12px, 12px);
   color: $features-text-color;
 
@@ -123,7 +125,7 @@
   .example__result-list-wrapper {
     width: 162px;
 
-    &:first-child  {
+    &:first-child {
       .example__result-description {
         width: 114px;
       }

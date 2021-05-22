@@ -16,6 +16,17 @@
   color: $features-text-color;
 }
 
+.copyright__icon-link {
+  fill: #666666;
+
+  &:focus,
+  &:hover {
+    .copyright__icon {
+      fill: $button-background-color;
+    }
+  }
+}
+
 @media (min-width: $tablet-width) {
   .copyright {
     width: 165px;

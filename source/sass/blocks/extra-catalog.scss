@@ -1,71 +1,264 @@
 .extra-catalog {
-  &__gift {
-    font-family: "Arial", "Helvetica", sans-serif;
-    color: $white;
-    background-color: $mobile-promo-background;
-  }
-}
-
-.extra-catalog__title {
-  @include font(24px, 24px);
-
-  @media (min-width: $desktop-width) {
-    width: 100%;
-  }
+  padding-top: 25px;
 }
 
 .extra-catalog__wrapper {
-  @media (min-width: $desktop-width) {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  padding-bottom: 35px;
+}
+
+.extra-catalog__header {
+  margin: 0;
+  margin-bottom: 35px;
+  position: relative;
+  font-size: 24px;
+  line-height: 1;
+  font-weight: 400;
+  background-image: linear-gradient(to bottom, transparent 0, transparent 13px, $button-background-color 13px, $button-background-color 16px, transparent 16px, transparent 100%);
+
+  span {
+    display: inline-block;
+    padding: 0 20px;
+    background-color: $white;
   }
 }
 
-.extra-products {
+.extra-catalog__list {
   @include list-reset();
+  margin-bottom: 38px;
+}
 
-  @media (min-width: $desktop-width) {
-    width: 70%;
+.extra-catalog__item {
+  padding-top: 13px;
+  padding-bottom: 17px;
+  border-top: 1px solid $input-border-hover;
+
+  &:last-child {
+    border-bottom: 1px solid $input-border-hover;
   }
 }
 
-.extra-product__item {
-  @media (min-width: $tablet-width) {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-  }
+.extra-catalog__feature {
+  margin-bottom: 15px;
+
+  font-family: "Arial", "Helvetica", sans-serif;
+
+  @include font(14px, 14px);
+  color: $features-text-color;
 }
 
-.extra-product__button {
-  @media (min-width: $tablet-width) {
-    width: 100%;
-  }
+.extra-catalog__title {
+  margin: 0;
+  margin-bottom: 13px;
 
-  @media (min-width: $desktop-width) {
-    width: 240px;
-  }
-}
-
-.extra-product {
-  &__feature {
-    @include font(14px, 14px);
-    color: $features-text-color;
-  }
-}
-
-.extra-product__title {
   @include font(16px, 16px);
   color: $product-card-text-color;
   text-transform: uppercase;
+}
 
-  @media (min-width: $tablet-width) {
-    margin: 0;
+.extra-catalog__features {
+  display: flex;
+  justify-content: space-between;
+}
+
+.extra-catalog__gift {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 289px;
+
+  font-family: "Arial", "Helvetica", sans-serif;
+
+  @include font(16px, 20px);
+
+  color: $white;
+
+  background-image: url("../img/gift-photo-mobile@1x.png");
+  background-color: $button-background-color;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 70%;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 58px;
+    left: 100px;
+
+    display: block;
+    width: 78px;
+    height: 80px;
+
+    background-image: url("../img/icon-gift.svg");
   }
 }
 
-.extra-product__features {
-  display: flex;
-  justify-content: space-between;
+@media (min-resolution: $retina-dpi),
+  (min-resolution: $retina-dppx) {
+  .extra-catalog__gift {
+    background-image: url("../img/gift-photo-mobile@2x.png");
+  }
+}
+
+.extra-catalog__gift-info {
+  width: 161px;
+  margin: 0;
+  margin-top: auto;
+  padding-bottom: 42px;
+  align-self: center;
+
+  text-align: center;
+  font-family: "Arial", "Helvetica", sans-serif;
+
+  @include font(16px, 20px);
+}
+
+@media (min-width: $tablet-width) {
+  .extra-catalog {
+    padding-top: 5px;
+  }
+
+  .extra-catalog__wrapper {
+    padding-bottom: 76px;
+  }
+
+  .extra-catalog__list {
+    margin-bottom: 70px;
+
+    border-left: 1px solid $input-border-hover;
+    border-right: 1px solid $input-border-hover;
+  }
+
+  .extra-catalog__item {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    padding: 26px 38px 28px 38px;
+  }
+
+  .extra-catalog__title {
+    margin-bottom: 24px;
+
+    @include font(20px, 20px);
+  }
+
+  .extra-catalog__feature {
+    @include font(16px, 20px);
+
+    &:first-child {
+      margin-right: 50px;
+    }
+  }
+
+  .extra-catalog__button {
+    width: 100%;
+  }
+
+  .extra-catalog__header {
+    margin-bottom: 80px;
+    padding: 0 calc((100vw - 708px) / 2);
+    font-size: 36px;
+    background-image: linear-gradient(to bottom, transparent 0, transparent 22px, $button-background-color 22px, $button-background-color 25px, transparent 25px, transparent 100%);
+
+    span {
+      padding: 0 36px;
+    }
+  }
+
+  .extra-catalog__gift {
+    flex-direction: row;
+    min-height: 200px;
+    padding-right: 124px;
+
+    background-image: url("../img/gift-photo-tablet@1x.png");
+    background-size: cover;
+    background-position: 0 50%;
+
+    &::after {
+      left: 80px;
+    }
+  }
+
+  @media (min-resolution: $retina-dpi),
+    (min-resolution: $retina-dppx) {
+    .extra-catalog__gift {
+      background-image: url("../img/gift-photo-tablet@2x.png");
+    }
+  }
+
+  .extra-catalog__gift-info {
+    margin-top: 0;
+    margin-left: auto;
+    padding: 0;
+    text-align: left;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .extra-catalog__wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 90px;
+  }
+
+  .extra-catalog__item {
+    align-items: center;
+    padding: 15px 0;
+  }
+
+  .extra-catalog__features {
+    width: 288px;
+  }
+
+  .extra-catalog__feature {
+    margin: 0;
+    align-self: center;
+  }
+
+  .extra-catalog__gift {
+    min-height: auto;
+    width: 245px;
+    padding: 0;
+    padding-top: 120px;
+
+    background-image: url("../img/gift-photo-desktop@1x.png");
+  }
+
+  @media (min-resolution: $retina-dpi),
+    (min-resolution: $retina-dppx) {
+    .extra-catalog__gift {
+      background-image: url("../img/gift-photo-desktop@2x.png");
+    }
+  }
+
+  .extra-catalog__gift-info {
+    width: 161px;
+    margin: 0 auto;
+
+    text-align: center;
+  }
+
+  .extra-catalog__list {
+    width: 896px;
+    margin-bottom: 0;
+    border: none;
+  }
+
+  .extra-catalog__button {
+    width: 244px;
+  }
+
+  .extra-catalog__header {
+    margin-top: 15px;
+    padding: 0 calc((100vw - 1300px) / 2);
+  }
+
+  .extra-catalog__title {
+    margin: 0;
+    width: 161px;
+    margin-right: 130px;
+  }
 }

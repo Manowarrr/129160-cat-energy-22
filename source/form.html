@@ -108,22 +108,26 @@
 
           <fieldset class="programm-form__group programm-form__group--contacts">
 
-            <div class="programm-form__header-wrapper">
-              <h2 class="programm-form__group-name">
-                Контактные данные (владельца кота)
-              </h2>
-            </div>
+            <h2 class="programm-form__group-name">
+              <span>Контактные данные <br class="programm-form__group-br--contacts"> (владельца кота)</span>
+            </h2>
 
             <div class="programm-form__group-wrapper container">
 
               <label class="programm-form__label-input">
                 <span class="programm-form__label-name" for="email">E-mail:*</span>
                 <input class="programm-form__input" id="email" type="email" placeholder="kuklachev@gmail.com">
+                <svg class="programm-form__icon programm-form__icon--mail" width="20" height="14">
+                  <use xlink:href="img/sprite.svg#icon-mail"></use>
+                </svg>
               </label>
 
               <label class="programm-form__label-input">
                 <span class="programm-form__label-name" for="phone">Телефон:*</span>
                 <input class="programm-form__input" id="phone" type="tel" placeholder="8 (960) 900-60-90">
+                <svg class="programm-form__icon programm-form__icon--phone" width="20" height="20">
+                  <use xlink:href="img/sprite.svg#icon-phone"></use>
+                </svg>
               </label>
 
             </div>
@@ -132,11 +136,9 @@
 
           <fieldset class="programm-form__group programm-form__group--comments">
 
-              <div class="programm-form__header-wrapper">
-                <h2 class="programm-form__group-name">
-                  Комментарий
-                </h2>
-              </div>
+            <h2 class="programm-form__group-name">
+              <span>Комментарий</span>
+            </h2>
 
             <div class="programm-form__group-wrapper container">
               <label class="programm-form__label visually-hidden" for="comment">Комментарий</label>
@@ -147,11 +149,9 @@
 
           <fieldset class="programm-form__group programm-form__group--additional">
 
-            <div class="programm-form__header-wrapper">
-              <h2 class="programm-form__group-name">
-                Дополнительно
-              </h2>
-            </div>
+            <h2 class="programm-form__group-name">
+              <span>Дополнительно</span>
+            </h2>
 
             <div class="programm-form__group-wrapper container">
 
@@ -217,35 +217,51 @@
       <div class="page-footer__wrapper container">
 
         <a class="page-footer__logo">
-          <img src="img/footer-logo.svg" width="101" height="18" alt="Функциональное питание для котов 'Cat Energy'">
+          <img src="img/footer-logo.svg" width="128" height="24" alt="Функциональное питание для котов 'Cat Energy'">
         </a>
 
         <!-- social -->
-        <ul class="social__list social">
+        <ul class="page-footer__social social">
 
           <li class="social__item">
-            <a class="social__link social__link--vkontakte" href="#"></a>
+            <a class="social__link" href="#">
+              <svg class="social__image social__image--vk" width="23" height="16">
+                <use xlink:href="img/sprite.svg#icon-vk"></use>
+              </svg>
+            </a>
           </li>
 
           <li class="social__item">
-            <a class="social__link social__link--instagram" href="#"></a>
+            <a class="social__link" href="#">
+              <svg class="social__image social__image--inst" width="16" height="16">
+                <use xlink:href="img/sprite.svg#icon-inst"></use>
+              </svg>
+            </a>
           </li>
 
           <li class="social__item">
-            <a class="social__link social__link--facebook" href="#"></a>
+            <a class="social__link" href="#">
+              <svg class="social__image social__image--fb" width="22" height="22">
+                <use xlink:href="img/sprite.svg#icon-fb"></use>
+              </svg>
+            </a>
           </li>
 
         </ul>
 
         <div class="page-footer__copyright copyright">
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-          <img src="img/academy-logo.svg" width="27" height="34" alt="Логотип HTML Academy">
+          <a class="copyright__icon-link" href="https://htmlacademy.ru/intensive/adaptive">
+            <svg class="copyright__icon" width="27" height="34">
+              <use xlink:href="img/sprite.svg#icon-academy"></use>
+            </svg>
+          </a>
         </div>
 
       </div>
 
     </footer>
 
-    <script src="js/script.js"></script>
+  <script src="js/script.js"></script>
   </body>
 </html>

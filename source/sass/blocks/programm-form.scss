@@ -44,27 +44,6 @@
   }
 }
 
-.programm-form__header-wrapper {
-  position: relative;
-
-  width: 320px;
-  margin: 0 auto;
-  margin-bottom: 35px;
-
-  &::after {
-    content: "";
-
-    position: absolute;
-    top: 15px;
-    z-index: -1;
-
-    display: block;
-    width: 100%;
-    height: 3px;
-    background-color: $button-background-color;
-  }
-}
-
 .programm-form__group--contacts {
   padding-top: 5px;
   margin-bottom: 25px;
@@ -73,7 +52,7 @@
 .programm-form__group--comments {
   margin-bottom: 23px;
 
-  .programm-form__header-wrapper {
+  .programm-form__group-name {
     margin-bottom: 39px;
   }
 }
@@ -81,23 +60,27 @@
 .programm-form__group--additional {
   margin-bottom: 38px;
 
-  .programm-form__header-wrapper {
+  .programm-form__group-name {
     margin-bottom: 40px;
   }
 }
 
 .programm-form__group-name {
-  display: inline-block;
-  padding: 0 20px;
-  max-width: 69.375%;
   margin: 0;
-  vertical-align: top;
+  margin-bottom: 35px;
+  position: relative;
 
-  @include font(24px, 26px);
+  @include font(24px, 24px);
+  font-weight: 400;
+  background-image: linear-gradient(to bottom, transparent 0, transparent 13px, $button-background-color 13px, $button-background-color 16px, transparent 16px, transparent 100%);
+
+  span {
+    display: inline-block;
+    padding: 0 20px;
+    background-color: $white;
+  }
+
   text-transform: none;
-  font-weight: normal;
-
-  background-color: $white;
 }
 
 .programm-form__option-group {
@@ -157,6 +140,43 @@
   }
 }
 
+.programm-form__icon {
+  position: absolute;
+
+
+  &--mail {
+    top: 15px;
+    right: 10px;
+    stroke: $product-card-text-color;
+  }
+
+  &--phone {
+    top: 13px;
+    right: 10px;
+    fill: $product-card-text-color;
+  }
+}
+
+.programm-form__input:focus + .programm-form__icon--phone {
+  fill: $button-background-color;
+}
+
+.programm-form__input:focus + .programm-form__icon--mail {
+  stroke: $button-background-color;
+}
+
+.programm-form__input:invalid {
+  border: 2px solid $input-error;
+}
+
+.programm-form__input:invalid + .programm-form__icon--phone {
+  fill: $input-error;
+}
+
+.programm-form__input:invalid + .programm-form__icon--mail {
+  fill: $input-error;
+}
+
 .programm-form__input-option:checked + .programm-form__label-option--radio::before {
   background-image: radial-gradient(circle, $button-background-color 40%, white 30%);
 }
@@ -185,12 +205,21 @@
   border: 1px solid $input-border;
 
   font-family: "Oswald", "Arial", sans-serif;
+
   @include font(16px, 18px);
   color: $features-text-color;
   text-transform: uppercase;
 
   &:hover {
     border: 1px solid $input-border-hover;
+  }
+
+  @media (min-width: $tablet-width) {
+    &:valid:focus {
+      padding: 9px 0 10px 22px;
+      border: 2px solid $product-card-text-color;
+      outline: none;
+    }
   }
 }
 
@@ -204,6 +233,7 @@
 
   font-family: "Arial", "Helvetica", sans-serif;
   text-align: center;
+
   @include font(14px, 16px);
 }
 
@@ -256,19 +286,25 @@
     }
   }
 
+  .programm-form__group-br--contacts {
+    display: none;
+  }
+
   .programm-form__group-wrapper {
     padding: 0 70px;
   }
 
-  .programm-form__header-wrapper {
-    width: 768px;
-    padding: 0 30px;
+  .programm-form__group-name {
     margin-bottom: 76px;
 
-    &::after {
-      left: 0;
-      top: 21px;
+    padding: 0 calc((100vw - 708px) / 2);
+    background-image: linear-gradient(to bottom, transparent 0, transparent 22px, $button-background-color 22px, $button-background-color 25px, transparent 25px, transparent 100%);
+
+    span {
+      padding: 0 36px;
     }
+
+    @include font(36px, 36px);
   }
 
   .programm-form__group--additional {
@@ -280,12 +316,11 @@
       flex-wrap: wrap;
     }
 
-    .programm-form__header-wrapper {
+    .programm-form__group-name {
       margin-bottom: 65px;
     }
 
-    .programm-form__option-group{
-      &:nth-child(1),
+    .programm-form__option-group {
       &:nth-child(1) {
         margin-bottom: 50px;
       }
@@ -307,8 +342,20 @@
   .programm-form__group--comments {
     margin-bottom: 65px;
 
-    .programm-form__header-wrapper {
+    .programm-form__group-name {
       margin-bottom: 76px;
+    }
+  }
+
+  .programm-form__icon {
+    &--mail {
+      top: 20px;
+      right: 10px;
+    }
+
+    &--phone {
+      top: 13px;
+      right: 10px;
     }
   }
 
@@ -316,13 +363,6 @@
     min-height: 174px;
   }
 
-  .programm-form__group-name {
-    margin: 0;
-    padding: 0 40px;
-    max-width: none;
-
-    @include font(36px, 36px);
-  }
   .programm-form__textarea,
   .programm-form__input {
     padding: 10px 0 11px 22px;
@@ -401,10 +441,9 @@
     }
   }
 
-  .programm-form__header-wrapper {
-    max-width: 1440px;
-    width: 1440px;
-    padding: 0 70px;
+  .programm-form__group-name {
+    margin-top: 15px;
+    padding: 0 calc((100vw - 1300px) / 2);
   }
 
   .programm-form__group--contacts {
@@ -431,7 +470,7 @@
       width: 221px;
     }
 
-    .programm-form__header-wrapper {
+    .programm-form__group-name {
       margin-bottom: 55px;
     }
   }
@@ -440,9 +479,6 @@
     padding: 0;
   }
 
-  .programm-form__group-name {
-    padding: 0 40px;
-  }
 
   .programm-form__label-option {
     &--checkbox {

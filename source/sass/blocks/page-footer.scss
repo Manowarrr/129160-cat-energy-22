@@ -6,6 +6,15 @@
 
 .page-footer__logo {
   padding: 34px 0 32px 0;
+
+  &[href]:focus,
+  &[href]:hover {
+    opacity: 0.8;
+  }
+
+  &[href]:active {
+    opacity: 0.6;
+  }
 }
 
 .page-footer__copyright {
@@ -48,10 +57,21 @@
   .page-footer__wrapper {
     flex-direction: row;
     justify-content: space-between;
+    padding-top: 55px;
+    padding-bottom: 61px;
 
     &::after,
     &::before {
       display: none;
     }
+  }
+
+  .page-footer__logo {
+    padding: 0;
+    margin-right: 30px;
+  }
+
+  .page-footer__copyright {
+    padding: 0;
   }
 }

@@ -137,12 +137,12 @@
     }
   }
 
-@media (min-resolution: $retina-dpi),
-  (min-resolution: $retina-dppx) {
-  .promo::before {
-    background-image: url("../img/index-background-desktop@2x.jpg");
+  @media (min-resolution: $retina-dpi),
+    (min-resolution: $retina-dppx) {
+    .promo::before {
+      background-image: url("../img/index-background-desktop@2x.jpg");
+    }
   }
-}
 
   .promo__container {
     padding: 83px 709px 188px 80px;
