@@ -1,18 +1,122 @@
+.showall-card {
+  position: relative;
+  display: block;
+  padding-top: 78px;
+
+  text-align: center;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 39px;
+    left: 145px;
+
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: $more-goods-cross;
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 25px;
+    left: 159px;
+
+    display: block;
+    width: 2px;
+    height: 30px;
+    background-color: $more-goods-cross;
+  }
+}
+
+.showall-card__btn {
+  background-color: $programmes-background;
+  color: $features-text-color;
+}
+
 .showall-card__text {
+  margin: 0;
+  margin-bottom: 8px;
+
+  @include font(16px, 20px);
+  text-transform: uppercase;
+  color: $map-offer-text-color;
+}
+
+.showall-card__slogan {
+  margin: 0;
+  margin-bottom: 21px;
+
+  font-family: "Arial", "Helvetica", sans-serif;
+
   @include font(12px, 16px);
   color: $features-text-color;
+}
 
-  @media (min-width: $tablet-width) {
+@media (min-width: $tablet-width) {
+  .showall-card {
+    min-height: 430px;
+    padding-top: 161px;
+    align-self: flex-end;
+
+    border: 1px solid $programmes-background;
+    background-image: none;
+
+    &::before {
+      top: 82px;
+      left: 132px;
+
+      width: 60px;
+      height: 2px;
+    }
+
+    &::after {
+      top: 52px;
+      left: 159px;
+
+      width: 2px;
+      height: 60px;
+    }
+  }
+
+  .showall-card__text {
+    width: 134px;
+    margin: 0 auto;
+    margin-bottom: 23px;
+
+    @include font(20px, 22px);
+  }
+
+  .showall-card__slogan {
+    width: 167px;
+    margin: 0 auto;
+    margin-bottom: 90px;
+
     @include font(16px, 18px);
   }
 }
 
-.showall-card__text--bold {
-  @include font(16px, 20px);
-  color: $product-card-text-color;
-  text-transform: uppercase;
+@media (min-width: $desktop-width) {
+  .showall-card {
+    padding-top: 155px;
 
-  @media (min-width: $tablet-width) {
-    @include font(20px, 22px);
+    &::before {
+      top: 82px;
+      left: 92px;
+
+      width: 60px;
+      height: 2px;
+    }
+
+    &::after {
+      top: 52px;
+      left: 122px;
+
+      width: 2px;
+      height: 60px;
+    }
   }
 }
