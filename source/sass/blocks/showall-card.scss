@@ -35,6 +35,16 @@
 .showall-card__btn {
   background-color: $programmes-background;
   color: $features-text-color;
+
+  &:hover,
+  &:focus {
+    background-color: $grey-button-hover;
+  }
+
+  &:active {
+    background-color: $grey-button-hover;
+    color: rgba(68, 68, 68, 0.3);
+  }
 }
 
 .showall-card__text {

@@ -1,7 +1,7 @@
-const mainNav = document.querySelector('.main-nav');
-const mainNavToggle = document.querySelector('.main-nav__toggle');
+var mainNav = document.querySelector('.main-nav');
+var mainNavToggle = document.querySelector('.main-nav__toggle');
 
-const changeMainNavVisibility = () => {
+var changeMainNavVisibility = function() {
   mainNav.classList.toggle("main-nav--opened");
   mainNav.classList.toggle("main-nav--closed");
 }
