@@ -69,12 +69,12 @@
   position: relative;
 
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 40px;
   padding: 0 calc((100vw - 320px) / 2);
 
   @include font(24px, 24px);
   font-weight: 400;
-  background-image: linear-gradient(to bottom, transparent 0, transparent 13px, $button-background-color 13px, $button-background-color 16px, transparent 16px, transparent 100%);
+  background-image: linear-gradient(to bottom, transparent 0, transparent 15px, $button-background-color 15px, $button-background-color 17px, transparent 17px, transparent 100%);
 
   span {
     display: inline-block;
@@ -133,7 +133,8 @@
     background-repeat: no-repeat;
   }
 
-  &:hover::before {
+  &:hover::before,
+  &:focus::before {
     border: 1px solid $option-hover;
   }
 
@@ -148,13 +149,13 @@
 
   &--mail {
     top: 15px;
-    right: 10px;
+    right: 15px;
     stroke: $product-card-text-color;
   }
 
   &--phone {
     top: 13px;
-    right: 10px;
+    right: 14px;
     fill: $product-card-text-color;
   }
 }
@@ -167,20 +168,23 @@
   stroke: $button-background-color;
 }
 
-.programm-form__input:invalid {
-  border: 2px solid $input-error;
-}
-
 .programm-form__input:invalid + .programm-form__icon--phone {
   fill: $input-error;
 }
 
 .programm-form__input:invalid + .programm-form__icon--mail {
-  fill: $input-error;
+  stroke: $input-error;
 }
 
 .programm-form__input-option:checked + .programm-form__label-option--radio::before {
-  background-image: radial-gradient(circle, $button-background-color 40%, white 30%);
+  background-image: url("../img/radio.svg");
+  background-size: 15px 15px;
+  background-position: 7px 7px;
+}
+
+.programm-form__input-option:disabled + .programm-form__label-option--checkbox,
+.programm-form__input-option:disabled + .programm-form__label-option--radio {
+  opacity: 0.3;
 }
 
 .programm-form__input-option:checked + .programm-form__label-option--checkbox::before {
@@ -191,7 +195,7 @@
 
 .programm-form__label-name {
   flex-shrink: 0;
-  margin-right: 13px;
+  margin-right: 10px;
 }
 
 .programm-form__input {
@@ -216,18 +220,40 @@
     border: 1px solid $input-border-hover;
   }
 
-  @media (min-width: $tablet-width) {
-    &:valid:focus {
-      padding: 9px 0 10px 22px;
-      border: 2px solid $product-card-text-color;
-      outline: none;
-    }
+  &::placeholder {
+    color: $features-text-color;
+    opacity:  1;
+  }
+
+  &:invalid {
+    border: 2px solid $input-error;
+    padding: 11px 0 11px 14px;
+    outline: none;
+  }
+
+  &:valid:focus {
+    border: 2px solid $product-card-text-color;
+    padding: 11px 0 11px 14px;
+    outline: none;
+  }
+}
+
+.programm-form__textarea {
+  width: 100%;
+  min-height: 150px;
+  padding: 8px 0 10px 14px;
+
+  resize: none;
+
+  &:valid:focus {
+    padding: 7px 0 10px 13px;
+    outline: none;
   }
 }
 
 .programm-form__btn {
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .programm-form__note {
@@ -237,13 +263,6 @@
   text-align: center;
 
   @include font(14px, 16px);
-}
-
-.programm-form__textarea {
-  width: 100%;
-  min-height: 149px;
-
-  resize: none;
 }
 
 @media (min-width: $tablet-width) {
@@ -300,7 +319,7 @@
     margin-bottom: 76px;
 
     padding: 0 calc((100vw - 708px) / 2);
-    background-image: linear-gradient(to bottom, transparent 0, transparent 22px, $button-background-color 22px, $button-background-color 25px, transparent 25px, transparent 100%);
+    background-image: linear-gradient(to bottom, transparent 0, transparent 23px, $button-background-color 23px, $button-background-color 25px, transparent 25px, transparent 100%);
 
     span {
       padding: 0 36px;
@@ -310,7 +329,7 @@
   }
 
   .programm-form__group--additional {
-    margin-bottom: 43px;
+    margin-bottom: 41px;
 
     .programm-form__group-wrapper {
       display: flex;
@@ -319,7 +338,7 @@
     }
 
     .programm-form__group-name {
-      margin-bottom: 65px;
+      margin-bottom: 68px;
     }
 
     .programm-form__option-group {
@@ -338,26 +357,26 @@
   }
 
   .programm-form__group--contacts {
-    margin-bottom: 65px;
+    margin-bottom: 63px;
   }
 
   .programm-form__group--comments {
-    margin-bottom: 65px;
+    margin-bottom: 62px;
 
     .programm-form__group-name {
-      margin-bottom: 76px;
+      margin-bottom: 78px;
     }
   }
 
   .programm-form__icon {
     &--mail {
       top: 20px;
-      right: 10px;
+      right: 14px;
     }
 
     &--phone {
-      top: 13px;
-      right: 10px;
+      top: 15px;
+      right: 14px;
     }
   }
 
@@ -365,11 +384,34 @@
     min-height: 174px;
   }
 
+  .programm-form__label-name {
+    margin-right: 15px;
+  }
+
   .programm-form__textarea,
   .programm-form__input {
     padding: 10px 0 11px 22px;
 
     @include font(20px, 30px);
+
+    &:invalid {
+      padding: 9px 0 10px 21px;
+      outline: none;
+    }
+
+    &:valid:focus {
+      padding: 9px 0 10px 21px;
+      outline: none;
+    }
+  }
+
+  .programm-form__textarea {
+    padding: 8px 0 11px 17px;
+
+    &:valid:focus {
+      padding: 7px 0 10px 16px;
+      outline: none;
+    }
   }
 
   .programm-form__label-input {
@@ -402,6 +444,11 @@
         height: 40px;
       }
     }
+  }
+
+  .programm-form__input-option:checked + .programm-form__label-option--radio::before {
+    background-size: 19px 19px;
+    background-position: 10px 10px;
   }
 
   .programm-form__submit {
@@ -438,7 +485,7 @@
       &:first-child,
       &:last-child {
         width: 569px;
-        margin-bottom: 65px;
+        margin-bottom: 50px;
       }
     }
   }
@@ -450,7 +497,7 @@
 
   .programm-form__group--contacts {
     padding-top: 0;
-    margin-bottom: 47px;
+    margin-bottom: 32px;
 
     .programm-form__group-wrapper {
       display: flex;
@@ -460,6 +507,10 @@
     .programm-form__label-input {
       width: 569px;
     }
+  }
+
+  .programm-form__group--comments {
+    margin-bottom: 49px;
   }
 
   .programm-form__group--additional {
@@ -473,7 +524,19 @@
     }
 
     .programm-form__group-name {
-      margin-bottom: 55px;
+      margin-bottom: 51px;
+    }
+
+    .programm-form__group-wrapper {
+      justify-content: flex-start;
+    }
+
+    .programm-form__option-group {
+      margin-right: 104px;
+
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
 

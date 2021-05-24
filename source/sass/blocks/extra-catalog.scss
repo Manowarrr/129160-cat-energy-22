@@ -13,7 +13,7 @@
   font-size: 24px;
   line-height: 1;
   font-weight: 400;
-  background-image: linear-gradient(to bottom, transparent 0, transparent 13px, $button-background-color 13px, $button-background-color 16px, transparent 16px, transparent 100%);
+  background-image: linear-gradient(to bottom, transparent 0, transparent 15px, $button-background-color 15px, $button-background-color 17px, transparent 17px, transparent 100%);
 
   span {
     display: inline-block;
@@ -160,7 +160,7 @@
     margin-bottom: 80px;
     padding: 0 calc((100vw - 708px) / 2);
     font-size: 36px;
-    background-image: linear-gradient(to bottom, transparent 0, transparent 22px, $button-background-color 22px, $button-background-color 25px, transparent 25px, transparent 100%);
+    background-image: linear-gradient(to bottom, transparent 0, transparent 23px, $button-background-color 23px, $button-background-color 25px, transparent 25px, transparent 100%);
 
     span {
       padding: 0 36px;

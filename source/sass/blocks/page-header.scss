@@ -25,8 +25,9 @@
 
 @media (min-width: $tablet-width) {
   .page-header__wrapper {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    gap: 95px;
+    grid-template-columns: 174px 440px;
     width: 768px;
     padding: 24px 30px;
   }
@@ -53,6 +54,8 @@
     width: 1220px;
     padding: 24px 0;
     padding-top: 54px;
+    gap: 540px;
+    grid-template-columns: 202px 478px;
   }
 
   .page-header__logo {
