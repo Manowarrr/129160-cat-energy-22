@@ -222,7 +222,7 @@
 
   &::placeholder {
     color: $features-text-color;
-    opacity:  1;
+    opacity: 1;
   }
 
   &:invalid {
@@ -380,10 +380,6 @@
     }
   }
 
-  .programm-form__textarea {
-    min-height: 174px;
-  }
-
   .programm-form__label-name {
     margin-right: 15px;
   }
@@ -406,6 +402,7 @@
   }
 
   .programm-form__textarea {
+    min-height: 174px;
     padding: 8px 0 11px 17px;
 
     &:valid:focus {
